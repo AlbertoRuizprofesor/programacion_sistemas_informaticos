@@ -105,7 +105,7 @@ def menu():
         print("Bienvenido a este casino. ¿Que desea hacer?")
         print("1. Jugar dados.\n2. Jugar dados con apuesta.\n3. Salir.")
         opcion = int(input("Elija una opción: "))
-
+        
         # Seleccionar la opción y llamar a la función juego
         match opcion:
             case 1:

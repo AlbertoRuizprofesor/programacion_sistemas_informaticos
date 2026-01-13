@@ -1,0 +1,62 @@
+history
+    1  cd
+    2  lss
+    3  dir
+    4  ls
+    5  pvd
+    6  pwd
+    7  mkdir
+    8  mkdir prueba
+    9  prueba
+   10  cd
+   11  pwd
+   12  cd prueba
+   13  git init
+   14  git clone https://github.com/AlbertoRuizprofesor/programacion_sistemas_informaticos.gif
+   15  git clone one ^[[200~https://github.com/AlbertoRuizprofesor/programacion_sistemas_informatic
+   16  git clone https://github.com/AlbertoRuizprofesor/programacion_sistemas_informaticos.git
+   17  ls
+   18  cd
+   19  cd programacion_sistemas_informaticos/
+   20  cd programacion_sistemas_informaticos
+   21  cd programacion_sistemas_informaticos
+   22  cd programacion_sistemas_informaticos
+   23  ls
+   24  ls prueba
+   25  cd prueba
+   26  cd programacion_sistemas_informaticos
+   27  ls
+   28  nano noemi.txt
+   29  nano noemi2.txt
+   30  ls
+   31  git add .
+   32  git commit -m "noemi.txt"
+   33  git push origin main
+   34  ls prueba
+   35  cd prueba
+   36  cd programacion_sistemas_informaticos
+   37  ls
+   38  git add . (noemi.txt)
+   39  git add .
+   40  git commit -m (noemi.txt)
+   41  git commit -m "noemi.txt"
+   42  git push origin main
+   43  git status
+   44  git push origin main
+   45  git status
+   46  ls prueba
+   47  cd prueba
+   48  cd programacion_sistemas_informaticos
+   49  ls
+   50  ls
+   51  git add .
+   52  git commit -m "noemi.txt"
+   53  git push origin main
+   54  git pull
+   55  git status
+   56  dir
+   57  git status
+   58  git push
+   59  git status
+   60  clear
+   61  history

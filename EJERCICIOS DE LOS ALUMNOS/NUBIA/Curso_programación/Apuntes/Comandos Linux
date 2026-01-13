@@ -1,0 +1,27 @@
+ls listar carpetas y ficheros
+cd meterme dentro de un directorio
+mkdir crear directorio
+nano (editor de texto Linux) + nombrecrear fichero dentro del directorio en el que esté ()
+ctrl
+git init para entrar en (master)
+(master) donde está el clone
+-la información sobre lo hecho
+git add . para coger todo lo que hay dentro para subirlo
+git commit -m preparado para subirlo
+git push para subir
+git pull para cogerlo
+
+----------------------------------------------------------------------------------------------------
+```git clone URL_DEL_REPOSITORIO
+cd programacion_sistemas_informaticos // para entrar a la carpeta del repositorio que acabamos de clonar
+nano nombrefichero.txt // para crear fichero y añadirle algo
+git add nombrefichero.txt // para añadir el nuevo fichero creado
+git commit //para crear un commit donde esta lo añadido anteriormente y subirlo
+git push // para realizar la subida```
+:ua para solucionar error merge
+:q para salir
+
+Comandos consola Linux:
+
+cd /home/usuario/nombre_directorio
+cd /home/usuario/nombre_directorio/nombre_subdirectorio

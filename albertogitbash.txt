@@ -1,1 +1,8 @@
+<<<<<<< HEAD
+
+Pruebade de subida
+archivo asdfasdfas
+Hola mundo cruel
+=======
 sadfasdfasdasdfasdfas
+>>>>>>> c13073195ce86bde7721817c0610beeb44cf4128

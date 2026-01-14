@@ -1,14 +1,15 @@
-# Desarrollar una funcion que reciba un string como parametro y nos muestre la cantidad de vocales.
-# Llamarla desde el bloque principal del programa 3 veces con string distintos.
+# Confeccionar una función que reciba tres enteros y los muestre ordenados de menor a mayor. 
+# En otra función solicitar la carga de 3 enteros por teclado y proceder a llamar a la primer función definida.
 
-def contar_vocales():
-    palabra = input("Ingrese una palabra: ")
-    vocales = "aeiouAEIOUáéíóúÁÉÍÓÚ"
-    contador = 0
-    for letra in palabra:
-        if letra in vocales:
-            contador = contador + 1
-    print(f"La palabra {palabra} tiene {contador} vocales.")
- 
-for n in range(3):
-    contar_vocales()   
+def carga_enteros():
+    entero1 = int(input("Ingrese el primer entero: "))
+    entero2 = int(input("Ingrese el segundo entero: "))
+    entero3 = int(input("Ingrese el tercer entero: "))
+    return entero1, entero2, entero3
+
+def ordenar_enteros(entero1, entero2, entero3):
+    enteros_ordenados = sorted([entero1, entero2, entero3])
+    print(f"Los enteros ordenados de menor a mayor son: {enteros_ordenados}")
+    
+entero1, entero2, entero3 = carga_enteros()
+ordenar_enteros(entero1, entero2, entero3)

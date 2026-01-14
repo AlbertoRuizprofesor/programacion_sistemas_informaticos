@@ -11,8 +11,8 @@ def cargar_datos():
     nombres = []
     edades = []
     for n in range(5):
-        nombres = input(f"Ingrese el nombre de la persona {n+1}: ")
-        edades = int(input(f"Ingrese la edad de {nombre}: "))
+        nombre = input(f"Ingrese el nombre de la persona {n+1}: ")
+        edad = int(input(f"Ingrese la edad de {nombre}: "))
         nombres.append(nombre)
         edades.append(edad)
     return [nombres, edades]

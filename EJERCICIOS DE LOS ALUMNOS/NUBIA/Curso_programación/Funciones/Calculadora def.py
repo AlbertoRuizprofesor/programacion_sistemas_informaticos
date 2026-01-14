@@ -33,9 +33,4 @@ def calcu(valor1,valor2):
     divi=valor1/valor2
     print(f"La suma es {suma}, la resta es {resta}, la multiplicacion es {multi}, y la division es {divi}")
 
-#suma()
-#resta()
-#multi()
-#divi()
-
 calcu(valor1,valor2)

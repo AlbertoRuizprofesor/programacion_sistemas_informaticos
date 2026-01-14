@@ -4,17 +4,18 @@
 # LLamar desde el bloque del programa principal a ambas funciones.
 
 def cuadrado():
-    x=int(input("Ingrese un número entero: "))
+    x = int(input("Ingrese un número entero: "))
     print(f"El cuadrado de {x} es: {x**2}")
 
-def producto():
-    x=int(input("Ingrese un número entero: "))
-    y=int(input("Ingrese un número entero: "))
-    print(f"El producto es de {x} y {y} es: {x*y}")
+def producto(): # producto = resultado de multiplicar ambos enteros
+    x = int(input("Ingrese un número entero: "))
+    y = int(input("Ingrese un número entero: "))
+    print(f"El producto es de {x} y {y} es: {x * y}")
 
-def llamarfuncion():
+def llamarfuncion(): # llamar a las funciones
     cuadrado()
     producto()
     
-llamarfuncion()
+llamarfuncion() # programa principal
+
 

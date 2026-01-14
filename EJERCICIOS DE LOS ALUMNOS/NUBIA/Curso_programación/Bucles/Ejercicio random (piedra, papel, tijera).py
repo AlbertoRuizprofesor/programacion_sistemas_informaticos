@@ -1,5 +1,8 @@
 import random
 
+def saludo():
+    return print("¡Bienvenido al juego de Piedra, Papel o Tijera!")
+    
 def juego_ppt():
     opciones = ["piedra", "papel", "tijeras"]
     usuario_eleccion = input("Elige piedra, papel o tijeras: ").lower()
@@ -18,13 +21,15 @@ def juego_ppt():
         print("¡Perdiste!")
 
 # Ejecutar el juego
+saludo()
 juego_ppt()
 
 # Para jugar de nuevo,  usar un bucle while (como se muestra en tutoriales):
 while True:
     juego_ppt()
     jugar_de_nuevo = input("¿Quieres jugar de nuevo? (sí/no): ").lower()
-    if jugar_de_nuevo != "sí":
+    if jugar_de_nuevo == "No" or "no":
+        print("¡Gracias por jugar!")
         break
     
     

@@ -16,4 +16,7 @@ while opcion:
             print("¡Ganaste!")
         else:
             print("¡Perdiste!")
+    elif eleccion == 2:
+        opcion = False
+        print("Gracias por jugar")
 

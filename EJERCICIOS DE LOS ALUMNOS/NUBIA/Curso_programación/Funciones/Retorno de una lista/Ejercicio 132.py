@@ -14,5 +14,5 @@ def imprimir_mayor10(li):
 
 
 # Llamar funciones
-lista = carga_lista()
+lista = carga_lista() 
 imprimir_mayor10(lista)

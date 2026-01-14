@@ -17,4 +17,3 @@ def main():
     mayor_menor(numeros)
     
 main()
-

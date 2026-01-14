@@ -8,13 +8,14 @@ print("")
 # de las personas mayores de edad (mayores o iguales a 18 años)
 
 def cargar_datos():
-    lista = [[], []]
+    nombres = []
+    edades = []
     for n in range(5):
         nombres = input(f"Ingrese el nombre de la persona {n+1}: ")
-        edad = int(input(f"Ingrese la edad de {nombres}: "))
-        nombres.append(nombres)
-        edad.append(edad)
-    return lista
+        edades = int(input(f"Ingrese la edad de {nombre}: "))
+        nombres.append(nombre)
+        edades.append(edad)
+    return [nombres, edades]
 
 def mostrar_mayores_edad(lista):
     print("Personas mayores de edad:")

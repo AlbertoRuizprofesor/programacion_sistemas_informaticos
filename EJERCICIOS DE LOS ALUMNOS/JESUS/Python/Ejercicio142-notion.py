@@ -13,8 +13,8 @@ def tabla_mul(numero, termino=10):
 #bloque programa 
 
 print("tabla del 3")
-tabla_mul(3)
-print("Tabla del 3 con 5 terminos")
+tabla_mul(3)                                #al no ponerle termino coge por defecto el 10 asignado 
+print("Tabla del 3 con 5 terminos")         #se le indica 5 parametro termino 
 tabla_mul(3,5)
 print("Tabla del 3 con 20 terminos")
-tabla_mul(termino=20,numero=3)
+tabla_mul(termino=20,numero=3)              #se puede alterar las asignaciones si antes le hacemos referencia a cual dato queremos cambiar

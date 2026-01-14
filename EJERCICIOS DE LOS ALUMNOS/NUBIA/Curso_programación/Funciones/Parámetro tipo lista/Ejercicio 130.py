@@ -9,5 +9,10 @@ def mas_larga():
         if len(palabra) == max(len(palabra) for palabra in lista_palabras):
             return palabra
 
-print(lista_palabras)
+
+print("Lista de palabras: ")
+
+for each in lista_palabras:
+    print("-", each)
+    
 print(f"La palabra más larga de la lista es: {mas_larga()}")

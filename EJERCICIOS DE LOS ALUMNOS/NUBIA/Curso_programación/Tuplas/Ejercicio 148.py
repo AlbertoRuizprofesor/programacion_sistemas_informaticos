@@ -1,0 +1,12 @@
+# Definir una tupla con tres valores enteros. 
+# Convertir el contenido de la tupla a tipo lista. 
+# Modificar la lista y luego convertir la lista en tupla.
+
+tupla = (1, 2, 3)
+lista = list(tupla)
+
+lista.append(4)
+
+tupla = tuple(lista)
+
+print(tupla)

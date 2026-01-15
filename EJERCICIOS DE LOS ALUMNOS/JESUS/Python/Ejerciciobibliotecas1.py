@@ -24,3 +24,5 @@ def imprimir_suma(lista):
     for elemento in lista:
         suma=suma+elemento
     print("Suma de todos sus elementos",suma)
+
+

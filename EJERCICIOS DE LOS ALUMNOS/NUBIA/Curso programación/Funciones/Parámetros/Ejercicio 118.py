@@ -3,14 +3,14 @@
 
 def mostrar_perimetro(lado):
 	per = lado*4
-	print("El perimetro es",per)
+	print("El perímetro es ",per)
 
 def mostrar_superficie(lado):
     sup = lado*lado
-    print("La superficie es",sup)
+    print("La superficie es ",sup)
 
 def cargar_dato():
-    lado = int(input("Ingrese el valor del lado de un cuadrado:"))
+    lado = int(input("Ingrese el valor del lado de un cuadrado: "))
     respuesta = input("¿Quiere calcular el perímetro o la superficie?: ").lower()
     if respuesta == "perimetro" or respuesta == "perímetro":
         mostrar_perimetro(lado)

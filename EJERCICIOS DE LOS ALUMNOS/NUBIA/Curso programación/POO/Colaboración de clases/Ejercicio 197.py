@@ -33,7 +33,7 @@ class Banco:
         self.cliente1 = Cliente("Nubia")
         self.cliente2 = Cliente("Ana")
         self.cliente3 = Cliente("Noemí")
-        self.cliente4 = Cliente("Darío)")
+        self.cliente4 = Cliente("Darío")
 
     def operar(self):
         self.cliente1.depositar(100)

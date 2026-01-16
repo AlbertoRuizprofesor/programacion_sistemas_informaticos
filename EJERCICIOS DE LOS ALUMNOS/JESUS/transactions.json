@@ -1,0 +1,12 @@
+[
+    {
+        "type": "ingreso",
+        "amount": 1500.0,
+        "description": "nomina"
+    },
+    {
+        "type": "gasto",
+        "amount": 130.0,
+        "description": "bateria"
+    }
+]

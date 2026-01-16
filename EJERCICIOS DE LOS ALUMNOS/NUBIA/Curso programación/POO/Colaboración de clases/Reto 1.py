@@ -59,7 +59,7 @@ class Producto:
         if unidades <= 0:
             print("Las unidades a vender deben ser positivas")
         elif unidades <= self.stock:
-            self.stock -= unidades
+            self.stock = self.stock - unidades
         else:
             print(f"No hay stock suficiente de {self.nombre}")
 
@@ -67,7 +67,7 @@ class Producto:
         return self.stock
 
     def imprimir(self):
-        print(f"Producto: {self.nombre} | Stock: {self.stock}")
+        print(f"Producto: {self.nombre}. Stock: {self.stock}")
 
 
 class Tienda:
@@ -88,12 +88,8 @@ class Tienda:
         self.monitor.vender(2)
 
     def stock_total(self):
-        total = (
-            self.portatil.retornar_stock()
-            + self.raton.retornar_stock()
-            + self.monitor.retornar_stock()
-        )
-
+        total = self.portatil.retornar_stock() + self.raton.retornar_stock() + self.monitor.retornar_stock()
+    
         self.portatil.imprimir()
         self.raton.imprimir()
         self.monitor.imprimir()

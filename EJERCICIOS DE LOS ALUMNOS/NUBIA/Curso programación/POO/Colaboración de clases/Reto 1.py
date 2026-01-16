@@ -1,0 +1,45 @@
+"""
+ RETO 1: RELACION ENTRE CLASES
+ 
+ CreaR un programa en el que vamos a simular una tienda, siguiendo el modelo del ejercicio 197:
+
+Clase Producto
+
+Cada producto tiene:
+
+		nombre
+		stock inicial 0
+
+Métodos:
+
+	reponer(unidades) → suma stock
+	vender(unidades) → resta stock (si hay suficiente)
+	retornar_stock() → devuelve el stock
+	imprimir() → muestra nombre y stock
+
+Clase Tienda
+
+Tiene 3 productos:
+
+	"Portátil"
+	"Ratón"
+	"Monitor"
+
+Métodos:
+
+	operar() → repone y vende stock
+	stock_total() → calcula stock total de la tienda e imprime los 3 productos
+ 
+ 
+ la función reponer podría tener esta estructura
+ 
+ 
+ def reponer(self, unidades):
+        self.stock += unidades
+        
+
+Pregunta
+
+¿como controlarías el stock?
+Respuesta: El stock se controla verificando en el método `vender` que la cantidad a vender sea menor o igual al stock disponible antes de realizar la resta.
+"""

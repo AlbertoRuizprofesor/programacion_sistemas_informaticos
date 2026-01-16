@@ -77,9 +77,9 @@ class Tienda:
     
     def ver_stock(self):
       
-        self.producto1.imprim_art
-        self.producto2.imprim_art
-        self.producto3.imprim_art
+        self.producto1.imprim_art()
+        self.producto2.imprim_art()
+        self.producto3.imprim_art()
 
 #bloque principal 
 

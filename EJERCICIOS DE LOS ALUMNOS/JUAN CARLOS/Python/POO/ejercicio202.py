@@ -4,7 +4,7 @@ Ejercicio de clases y herencias
 #Clases
 class   Productos:
 #Constructor
-    def __init__(self, nombre, fabricante="", precio=0):
+    def __init__(self, nombre, fabricante="", precio=0.0):
         self.nombre = nombre
         self.fabricante = fabricante
         self.precio = precio
@@ -93,9 +93,6 @@ class Freidora(Electrodomestico):
     def imprimir(self):
         super().imprimir()
         print(f"Temperatura Máxima: {self.temp_max}ºC")
-
-
-
 
 #Funciones
 def borrar_pantalla():

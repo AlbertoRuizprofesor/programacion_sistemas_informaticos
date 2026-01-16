@@ -6,8 +6,6 @@
 
 # Luego debemos definir los atributos y los métodos de cada clase:
 
-
-
 class Cliente:
     def __init__(self,nombre):
         self.nombre=nombre
@@ -44,7 +42,6 @@ class Banco:
         self.cliente4.retirar(449)
         self.cliente5.depositar(2000)
         self.cliente5.retirar(1200)
-
 
 
     def depositos_totales(self):

@@ -19,3 +19,10 @@ class Electronica(Productos):
     def imprimir(self):
         super().imprimir()
         print(f"Modo: {self.modo}")
+        
+    
+# Bloque principal
+producto1 = Productos("Funda", "Samsung", 15)
+producto1.imprimir()
+electronica1 = Electronica("Portátil", "HP", 2000, "gaming")
+electronica1.imprimir()

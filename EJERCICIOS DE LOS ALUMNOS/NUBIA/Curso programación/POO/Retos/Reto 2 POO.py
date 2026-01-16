@@ -17,6 +17,7 @@ class Compras:
         print("Tablet")
         self.producto = (input("Ingrese el producto: "))
         self.meses = int(input("Ingrese en cuántos meses quiere pagar: "))
+        print("-"*50)
         
     def precios(self):
         if self.producto == "PORTÁTIL" or "PORTATIL" or "Portátil" or "Portatil" or "portátil" or "portatil":
@@ -28,9 +29,9 @@ class Compras:
 
     def pagar(self):
         if self.meses > 6:
-            aumento = self.precio * 0.05
-            cuota = (self.precio + aumento) / self.meses
-            precio_final = self.precio + aumento
+            intereses = self.precio * 0.05
+            cuota = (self.precio + intereses) / self.meses
+            precio_final = self.precio + intereses
             print(f"Producto: {self.producto}")
             print(f"Precio: {self.precio} euros")
             print(f"Numero de meses a pagar: {self.meses}")

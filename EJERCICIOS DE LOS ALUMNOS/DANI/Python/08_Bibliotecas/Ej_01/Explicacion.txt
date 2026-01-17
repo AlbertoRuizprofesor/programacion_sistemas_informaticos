@@ -1,0 +1,13 @@
+Primero importamos el módulo operacioneslista y seguidamente llamamos a las funciones de cargar, imprimir_mayor y imprimir_suma. 
+Recordar que debemos anteceder el nombre del módulo donde están definidas.
+
+Podemos ver luego de ejecutarlo a nuestro programa que en la carpeta de nuestro proyecto1 además de los archivo operacioneslista.py y principal.py hay una carpeta 
+llamada __pycache__ con un archivo con extensión *.pyc (operacioneslista.cpython-35.pyc) 
+Este archivo lo crea automáticamente el Python cuando ejecutamos por primera vez nuestro programa y tiene por objetivo hacer más eficiente las ejecuciones futuras del programa.
+
+Por ahora dispondremos todos los módulos de nuestro proyecto en la misma carpeta.
+
+Esta característica de Python de poder disponer funcionalidades en distintos archivos es fundamental para cuando hay que desarrollar programas en los cuales intervienen un 
+conjunto de programadores. Se posibilita asignar a cada programador distintas funcionalidades y que se implementen en distintos módulos.
+
+También nos facilita el implementar módulos con funcionalidades que pueden ser reutilizadas en otros proyectos, así como sucede con la biblioteca estándar de Python.

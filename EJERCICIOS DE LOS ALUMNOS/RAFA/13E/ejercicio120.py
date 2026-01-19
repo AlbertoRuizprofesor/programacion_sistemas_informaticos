@@ -1,4 +1,4 @@
-#ejercicio119.py
+
 
 def ordenar_imprimir(v1,v2,v3):
     if v1<v2 and v1<v3:

@@ -1,0 +1,12 @@
+[
+    {
+        "type": "ingreso",
+        "amount": 1000.0,
+        "description": "Salary"
+    },
+    {
+        "type": "gasto",
+        "amount": 50.0,
+        "description": "Lunch"
+    }
+]

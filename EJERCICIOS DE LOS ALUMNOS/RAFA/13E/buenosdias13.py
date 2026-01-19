@@ -1,6 +1,6 @@
 def mostrar_perimetro(lado):
-	 per=lado*4
-	 print("El perimetro es",per)
+	per=lado*4
+	print("El perimetro es",per)
 
 
 def mostrar_superficie(lado):

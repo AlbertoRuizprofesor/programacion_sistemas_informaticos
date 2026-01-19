@@ -14,5 +14,3 @@ def separacion():
 for x in range(5):
     suma()
     separacion()
-
-print(hola mundo)

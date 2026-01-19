@@ -1,0 +1,10 @@
+num1=float(input("Introduce un numero 1: "))
+num2=float(input("introduce un numero 2: "))
+totalSuma=num1+num2
+totalResta=num1-num2
+totalMultiplicacion=num1*num2
+totalDivision=num1/num2
+print(f"La suma es de num1 + num2 = {totalSuma}")
+print(f"La resta es de num1 - num2 = {totalResta}")
+print(f"La multiplicacion es de num1 * num2 = {totalMultiplicacion}")
+print(f"La division es de num1 / num2 = {totalDivision}") 

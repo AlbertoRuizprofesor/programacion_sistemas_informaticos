@@ -8,7 +8,7 @@ def cargar():
 
 def imprimir(lista):
     for x in range(len(lista)):
-        print(lista[x], sep=",")
+        print(lista[x], end=",")
 
 
 # bloque principal

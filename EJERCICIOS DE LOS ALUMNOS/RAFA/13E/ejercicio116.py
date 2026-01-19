@@ -1,6 +1,5 @@
 
 def carga_suma(v1,v2):
-    
     suma=valor1+valor2
     return suma
 

@@ -1,7 +1,3 @@
-from re import A
-from click import clear
-
-
 print("Ejercicio 158")
 print("")
 print("")

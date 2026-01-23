@@ -44,14 +44,14 @@ class Transporte(Vehiculo):
 #         self.precio=precio
 #         print(self.nombre,self.fabricante,self.precio,self.consumo,self.modelo,self.tipo)
 
-# class Motos(Transporte):
-#     def __init__(self, nombre, consumo, fabricante, precio, modelo, tipo):
-#         super().__init__(nombre, consumo, fabricante, precio, modelo, tipo)
-#         self.nombre=nombre
-#         self.consumo=consumo
-#         self.fabricante=fabricante
-#         self.precio=precio
-#         print(self.nombre,self.fabricante,self.precio,self.consumo,self.modelo,self.tipo)
+class Motos(Transporte):
+    def __init__(self, nombre, consumo, fabricante, precio, modelo, tipo):
+        super().__init__(nombre, consumo, fabricante, precio, modelo, tipo)
+        self.nombre=nombre
+        self.consumo=consumo
+        self.fabricante=fabricante
+        self.precio=precio
+        print(self.nombre,self.fabricante,self.precio,self.consumo,self.modelo,self.tipo)
 
 class Coches(Transporte):
     def __init__(self, nombre, consumo, fabricante, precio, modelo, tipo):
@@ -78,6 +78,6 @@ class Coches(Transporte):
 
 coche1=Coches("A3","6/100","Audi","40000","XT","Turismo")
 # autobus1=Autobuses("EMT","20/100","Volvo","80000","Ranger","Electrico")
-# motos1=Motos("Varanero","4/100","Honda","12000","rxc8","Naked")
+motos1=Motos("Varanero","4/100","Honda","12000","rxc8","Naked")
 
 # hormigomera1=Hormigomera("aaaaa","bbbbb","ccccc","ddddd","eeeee","fffff")

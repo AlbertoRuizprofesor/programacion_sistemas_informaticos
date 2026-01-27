@@ -16,8 +16,8 @@
 
 
 -- Volcando estructura de base de datos para cursos
-CREATE DATABASE IF NOT EXISTS `cursos` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `cursos`;
+CREATE DATABASE IF NOT EXISTS `cursos2026` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `cursos2026`;
 
 -- Volcando estructura para tabla cursos.alumno
 CREATE TABLE IF NOT EXISTS `alumno` (

@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS phoneland_shop;
 
 CREATE DATABASE phoneland_shop
   DEFAULT CHARACTER SET utf8mb4
-  COLLATE utf8mb4_0900_ai_ci;
+  COLLATE utf8mb4_unicode_ci;
 
 USE phoneland_shop;
 
@@ -91,35 +91,4 @@ INSERT INTO ventas VALUES
 (5,2,1,'2023-05-10'),
 (6,3,3,'2023-06-15');
 
--- ==========================
--- TABLA HISTORIAL
--- ==========================
-CREATE TABLE historial (
-  idhistorial INT AUTO_INCREMENT,
-  fecha_hora_actual TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  mensaje VARCHAR(255),
-  PRIMARY KEY (idhistorial)
-) ENGINE=InnoDB;
 
--- ==========================
--- TABLA REPLICA_VENTAS
--- ==========================
-CREATE TABLE replica_ventas (
-  idventas INT,
-  idclientes INT,
-  idproductos INT,
-  fecha_ventas DATE,
-  PRIMARY KEY (idventas),
-  FOREIGN KEY (idclientes)
-    REFERENCES clientes(idclientes)
-    ON DELETE SET NULL
-    ON UPDATE CASCADE,
-  FOREIGN KEY (idproductos)
-    REFERENCES productos(idproducto)
-    ON DELETE SET NULL
-    ON UPDATE CASCADE
-) ENGINE=InnoDB;
-
--- Copia inicial de ventas
-INSERT INTO replica_ventas
-SELECT * FROM ventas;

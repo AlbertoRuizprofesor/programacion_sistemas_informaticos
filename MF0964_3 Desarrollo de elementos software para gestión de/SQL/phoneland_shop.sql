@@ -1,10 +1,10 @@
 DROP DATABASE IF EXISTS phoneland_shop;
 
-CREATE DATABASE phoneland_shop
+CREATE DATABASE phoneland_shop_2026
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE phoneland_shop;
+USE phoneland_shop_2026;
 
 -- ==========================
 -- TABLA CLIENTES

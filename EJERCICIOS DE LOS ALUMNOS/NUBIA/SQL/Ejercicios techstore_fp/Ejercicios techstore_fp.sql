@@ -82,3 +82,44 @@ SELECT v.fecha, SUM(dv.cantidad * dv.precio_unitario) AS facturacion_dia  FROM v
 JOIN detalle_venta dv on dv.id_venta = v.id_venta
 GROUP BY v.fecha
 ORDER BY v.fecha;
+
+-- 3.17 Clientes que han comprado al menos una vez
+SELECT * FROM clientes
+WHERE id_cliente IN (SELECT id_cliente FROM ventas);
+
+-- 3.18 Clientes que NO han comprado nunca
+SELECT * FROM clientes
+WHERE id_cliente NOT IN (SELECT id_cliente FROM ventas);
+
+-- 3.19 Productos que se han vendido alguna vez 
+SELECT * FROM productos
+WHERE id_producto IN (SELECT id_producto FROM detalle_venta);
+
+-- 3.20 Productos que NO se han vendido nunca
+SELECT * FROM productos
+WHERE id_producto NOT IN (SELECT id_producto FROM detalle_venta);
+
+-- 3.21 Productos con precio superior al precio medio
+SELECT * FROM productos
+WHERE precio > (SELECT AVG(precio) FROM productos);
+
+-- 3.22 Ventas con total superior a la media de todas las ventas 
+# NO ME SALE
+SELECT * FROM ventas
+WHERE SUM(cantidad*precio_unitario) AS total > (SELECT AVG(total) FROM detalle_venta);
+
+-- 3.23 Cliente que más ha gastado (una sola fila)
+SELECT clientes.id_cliente, clientes.nombre, total.gasto_total FROM clientes
+JOIN (
+	SELECT ventas.id_cliente, SUM(cantidad*precio_unitario) AS gasto_total
+	FROM ventas
+	JOIN detalle_venta ON detalle_venta.id_venta = ventas.id_venta
+	GROUP BY ventas.id_cliente
+	) total ON clientes.id_cliente = total.id_cliente
+ORDER BY total.gasto_total DESC
+LIMIT 1;
+
+-- 3.24 Productos vendidos en la misma venta que el “iPhone 13”
+# NO ME SALE
+
+	

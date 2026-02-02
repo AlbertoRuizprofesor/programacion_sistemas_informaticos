@@ -18,7 +18,7 @@ public class Calculadora {
         if (numero2 == 0) {
             division = 0;
         }else{
-                division = numero1 / numero2;
+            division = numero1 / numero2;
         }
         System.out.println("La suma de " + numero1 + " y " + numero2 + " es: " + suma);
         System.out.println("La resta de " + numero1 + " y " + numero2 + " es: " + resta);

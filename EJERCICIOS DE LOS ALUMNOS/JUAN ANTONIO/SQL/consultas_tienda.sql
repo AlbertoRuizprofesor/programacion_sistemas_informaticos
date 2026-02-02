@@ -1,0 +1,2 @@
+SELECT nombre, ROUND(precio)
+FROM producto;

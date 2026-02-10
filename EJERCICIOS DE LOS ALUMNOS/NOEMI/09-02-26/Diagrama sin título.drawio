@@ -1,0 +1,77 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Página-1" id="RWhz4MCvTbZpsTZVSeKd">
+    <mxGraphModel dx="1426" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="¿DESEA CONTINUAR?" vertex="1">
+          <mxGeometry height="140" width="155" x="272.5" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-5" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="NOMBRE&lt;br&gt;APELLIDOS" vertex="1">
+          <mxGeometry height="60" width="190" x="255" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="INTRODUCE TU NOMBRE Y APELLIDOS" vertex="1">
+          <mxGeometry height="60" width="185" x="255" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="INICIO" vertex="1">
+          <mxGeometry height="90" width="200" x="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="FIN DEL PROGRAMA" vertex="1">
+          <mxGeometry height="90" width="200" x="250" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-10" edge="1" parent="1" source="XfyhtYDosBYWnmWFe-TF-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.547;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" target="XfyhtYDosBYWnmWFe-TF-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="210" as="sourcePoint" />
+            <mxPoint x="360" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-11" edge="1" parent="1" source="XfyhtYDosBYWnmWFe-TF-5" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="XfyhtYDosBYWnmWFe-TF-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="300" as="sourcePoint" />
+            <mxPoint x="380" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-13" edge="1" parent="1" source="XfyhtYDosBYWnmWFe-TF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.3;entryY=0.207;entryDx=0;entryDy=0;entryPerimeter=0;" target="XfyhtYDosBYWnmWFe-TF-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="INTRODUCE SU APELLIDO" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-15" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#f8cecc;strokeColor=#b85450;" value="MOSTRAR NOMBRE Y APELLIDOS" vertex="1">
+          <mxGeometry height="100" width="160" x="30" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-19" edge="1" parent="1" source="XfyhtYDosBYWnmWFe-TF-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1.019;entryY=0.671;entryDx=0;entryDy=0;entryPerimeter=0;" target="XfyhtYDosBYWnmWFe-TF-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-28" connectable="0" parent="XfyhtYDosBYWnmWFe-TF-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SI&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1286" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-24" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.569;entryY=-0.04;entryDx=0;entryDy=0;entryPerimeter=0;" target="XfyhtYDosBYWnmWFe-TF-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="121" y="602" as="sourcePoint" />
+            <mxPoint x="380" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-25" edge="1" parent="1" source="XfyhtYDosBYWnmWFe-TF-15" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="115" y="800" as="sourcePoint" />
+            <mxPoint x="250" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-26" edge="1" parent="1" source="XfyhtYDosBYWnmWFe-TF-2" style="endArrow=classic;html=1;rounded=0;" target="XfyhtYDosBYWnmWFe-TF-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="480" as="sourcePoint" />
+            <mxPoint x="480" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XfyhtYDosBYWnmWFe-TF-27" connectable="0" parent="XfyhtYDosBYWnmWFe-TF-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="NO" vertex="1">
+          <mxGeometry relative="1" x="-0.0235" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

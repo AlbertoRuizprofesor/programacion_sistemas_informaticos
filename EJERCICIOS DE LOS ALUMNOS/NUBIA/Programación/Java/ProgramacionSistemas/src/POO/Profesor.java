@@ -1,0 +1,31 @@
+package POO;
+
+public class Profesor extends Persona {
+	private String asignatura;
+	private double salario;
+	
+	public Profesor(String nombre, String apellidos, int edad, String asignatura, double salario) {
+		super(nombre, apellidos, edad);
+		this.asignatura=asignatura;
+		this.salario=salario;
+	}
+	public String getAsignatura() {
+		return asignatura;
+	}
+	public void setAsignatura(String asignatura) {
+		this.asignatura = asignatura;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	@Override
+	public String toString() {
+		return "Profesor [nombre=" + getNombre() + ", apellidos=" + getApellidos() + ", edad=" + getEdad()+ ", asignatura=" + asignatura + ", salario=" + salario + "]";
+	}
+	
+}

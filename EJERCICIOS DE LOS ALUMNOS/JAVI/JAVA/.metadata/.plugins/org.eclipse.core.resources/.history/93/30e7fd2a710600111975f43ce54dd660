@@ -1,0 +1,13 @@
+package POO;
+
+public class VehiculoMain {
+
+	public static void main(String[] args) {
+		
+		Vehiculo vehiculo = new Vehiculo("Diesel", 4, "S350", 25000.50);
+		Coche coche = new Coche("Gasolina", 4, "E290", 34000.60, true);
+		
+
+	}
+
+}

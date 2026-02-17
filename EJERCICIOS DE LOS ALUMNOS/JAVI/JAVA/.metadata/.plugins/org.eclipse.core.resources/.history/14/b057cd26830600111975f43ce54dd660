@@ -1,0 +1,54 @@
+package Videojuego;
+
+public class Guerrero extends Heroe {
+	
+    private int defensaEscudo; // Reduce el daño recibido
+
+    public Guerrero(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad, int defensaEscudo) {
+        super(nombre, vida, mana, fuerza, destreza, inteligencia, velocidad);
+        this.defensaEscudo = defensaEscudo;
+    }
+    
+    public int getDefensaEscudo() {
+		return defensaEscudo;
+	}
+
+	public void setDefensaEscudo(int defensaEscudo) {
+		this.defensaEscudo = defensaEscudo;
+	}
+	
+	@Override
+	public void atacar () {
+		setFuerza(getFuerza()+ 10);
+		System.out.println("¡La fuerza de " + getNombre() + " ha subido a " + getFuerza() + "!");
+    }
+	
+	@Override
+	public void curar () {
+		setVida(getVida()+ 30);
+		System.out.println("¡La vida de " + getNombre() + " ha subido a " + getVida() + "!");
+    }
+		
+	// El escudo absorbe parte del golpe
+    public void bloquear(int danioEnemigo) {
+        int danioFinal = danioEnemigo - this.defensaEscudo;
+        if (danioFinal < 0) danioFinal = 0;
+        
+        setVida(getVida() - danioFinal); 
+        System.out.println(getNombre() + " bloqueó parte del golpe. Vida restante: " + getVida());
+    }
+
+    public void entrenarFuerza() {
+        setFuerza(getFuerza() + 5);
+        System.out.println("¡La fuerza de " + getNombre() + " ha subido a " + getFuerza() + "!");
+    }
+
+    @Override
+    public String toString() {
+        // Usamos super.toString() para traer nombre, vida, etc.
+        // Y solo añadimos lo que es exclusivo del Guerrero.
+        return "Guerrero [" + super.toString() + ", DefensaEscudo=" + defensaEscudo + "]";
+    }
+    
+    
+}

@@ -1,0 +1,46 @@
+package interfaces;
+
+
+public class Clientes1 implements Datos_Personales {
+
+    private String nombre;
+    private String dni;
+    private String telefono;
+    private CuentaBancaria cuenta;
+
+    public Clientes(String nombre, String dni,
+    		String telefono, 
+    		CuentaBancaria cuenta) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.telefono = telefono;
+        this.cuenta = cuenta;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public CuentaBancaria getCuenta() {
+        return cuenta;
+    }
+
+    @Override
+    public void mostrarDatosCliente() {
+        System.out.println("👤 Datos del cliente");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("DNI: " + dni);
+        System.out.println("Teléfono: " + telefono);
+        System.out.println("Cuenta: " + cuenta.getNumeroCuenta());
+        System.out.println("Banco: " + cuenta.getNombre_banco());
+        System.out.println("Saldo: " + cuenta.getSaldo());
+    }
+}

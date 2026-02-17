@@ -1,0 +1,21 @@
+package Videojuego;
+
+public class Ladron extends Heroe {
+	
+    private int nivelSigilo;
+
+    public Ladron(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad, int nivelSigilo) {
+        super(nombre, vida, mana, fuerza, destreza, inteligencia, velocidad);
+        this.nivelSigilo = nivelSigilo;
+    }
+
+    public void robar() {
+        if (this.nivelSigilo > 50) {
+            System.out.println(getNombre() + " ha robado 100 monedas de oro.");
+            this.nivelSigilo += 2; // Mejora su habilidad con el éxito
+        } else {
+            System.out.println("¡Te han pillado! Pierdes 10 de vida.");
+            setVida(getVida() - 10);
+        }
+    }
+}

@@ -1,0 +1,8 @@
+package interfaces;
+
+public interface DatosCliente {
+	
+	String mostrarDatos();
+	
+	
+}

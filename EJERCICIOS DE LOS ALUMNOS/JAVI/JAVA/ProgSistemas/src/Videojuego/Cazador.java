@@ -1,0 +1,47 @@
+package Videojuego;
+
+public class Cazador extends Heroe {
+
+	private int flechas;
+
+	public Cazador(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad,
+			int flechas) {
+		super(nombre, vida, mana, fuerza, destreza, inteligencia, velocidad);
+		this.flechas = flechas;
+	}
+
+	// --- MÉTODOS DE ACCIÓN ---
+
+	@Override
+	public void atacar() {
+		setDestreza(getDestreza() + 1);
+		System.out.println("¡" + getNombre() + " tensa el arco! Destreza actual: " + getDestreza());
+	}
+
+	@Override
+	public void curar() {
+		setVida(getVida() + 20);
+		System.out.println("¡" + getNombre() + " usa hierbas medicinales! Vida actual: " + getVida());
+	}
+
+	public void disparoRapido() {
+		if (this.flechas >= 3) {
+			this.flechas -= 3;
+			setVelocidad(getVelocidad() + 5);
+			System.out.println(">>> " + getNombre() + " lanza una ráfaga de 3 flechas. Restan: " + this.flechas);
+		} else {
+			System.out.println("!!! No quedan suficientes flechas para Disparo Rápido.");
+		}
+	}
+
+	public void recolectarFlechas() {
+		this.flechas += 10;
+		System.out.println("+++ " + getNombre() + " ha fabricado 10 flechas. Total: " + this.flechas);
+	}
+
+	@Override
+	public String toString() {
+		
+		return  getNombre() + " [" + super.toString() + ", flechas=" + flechas + "]";
+	}
+}

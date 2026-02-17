@@ -1,0 +1,57 @@
+package interfaces;
+
+public class Empresa extends Clientes {
+	
+	private String tipo;
+
+	public Empresa(String nombre, String tipo) {
+		super(nombre);
+		this.tipo = tipo;
+	}
+
+	public Empresa(String nombre) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Empresa [getTipo()=" + getTipo() + ", getNombre()=" + getNombre() + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

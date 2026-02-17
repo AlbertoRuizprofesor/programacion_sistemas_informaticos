@@ -1,0 +1,48 @@
+package pooabstracta;
+
+public class MainElectrodomestico {
+
+	public static void main(String[] args) {
+		
+		Lavadora [] lavadora = new Lavadora[2];
+		lavadora[0] = new Lavadora("Blanco" ,25, "Siemens", "Siemens" , 350.50, 10, 30);
+		lavadora[1] = new Lavadora("Gris" ,30, "Whirpol", "Max300" , 550.50, 9, 35);
+		
+		Cafetera [] cafetera = new Cafetera[2];
+		cafetera[0] = new Cafetera("negro", 1, "Longhi", "Orbegozo", 25.50, "italiana");
+		cafetera[1] = new Cafetera("rojo", 2, "Longhi", "Orbegozo", 15.50, "tradicional");
+		
+		Frigorifico [] frigorifico = new Frigorifico[2];
+		frigorifico[0] = new Frigorifico("Blanco" , 50, "Hisense", "Hitachi" , 950, 120, 190);
+		frigorifico[1] = new Frigorifico("Gris" , 60, "Indesit", "Xuang" , 550.50, 150, 180);
+				
+		for (Lavadora lava : lavadora) {
+			System.out.println(lavadora);
+		}
+		for (Cafetera cafe : cafetera) {
+			System.out.println(cafetera);
+		}
+		
+		for (Frigorifico frigo : frigorifico) {
+			System.out.println(frigorifico);
+		}
+		
+		
+		
+		
+		renault.acelerar();
+		renault.frenar();
+		renault.aparcar();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

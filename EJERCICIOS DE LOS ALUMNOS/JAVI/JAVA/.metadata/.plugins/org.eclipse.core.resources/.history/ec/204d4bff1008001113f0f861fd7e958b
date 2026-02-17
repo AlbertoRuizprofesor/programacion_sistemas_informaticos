@@ -1,0 +1,9 @@
+package poobancos;
+
+public class Banco {
+	
+	private String nombre_banco;
+	
+	
+
+}

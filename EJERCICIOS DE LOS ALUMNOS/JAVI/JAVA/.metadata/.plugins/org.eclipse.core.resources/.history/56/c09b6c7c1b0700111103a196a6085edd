@@ -1,0 +1,53 @@
+package Videojuego;
+
+public class Ladron extends Heroe {
+	
+    private int nivelSigilo;    
+
+ 
+	public Ladron(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad, int nivelSigilo) {
+        super(nombre, vida, mana, fuerza, destreza, inteligencia, velocidad);
+        this.nivelSigilo = nivelSigilo;
+    }
+	
+	   public int getNivelSigilo() {
+			return nivelSigilo;
+		}
+
+		public void setNivelSigilo(int nivelSigilo) {
+			this.nivelSigilo = nivelSigilo;
+		}
+		
+	@Override
+	public void atacar () {
+			setVelocidad(getVelocidad()+ 10);
+			System.out.println("¡La velocidad de " + getNombre() + " ha subido a " + getFuerza() + "!");
+	    }
+	@Override
+	public void curar () {
+		setVida(getVida()+ 15);
+		System.out.println("¡La vida de " + getNombre() + " ha subido a " + getVida() + "!");
+    }
+
+
+    public void robar() {
+        if (this.nivelSigilo > 50) {
+            System.out.println(getNombre() + " ha robado 100 monedas de oro.");
+            this.nivelSigilo += 2; // Mejora su habilidad con el éxito
+        } else {
+            System.out.println("¡Te han pillado! Pierdes 10 de vida.");
+            setVida(getVida() - 10);
+        }
+    }
+    
+    @Override
+    public String toString() {
+        // Usamos super.toString() para traer nombre, vida, etc.
+        // Y solo añadimos lo que es exclusivo del Guerrero.
+        return "Ladron [" + super.toString() + ", nivelSigilo=" + nivelSigilo + "]";
+    }
+    
+    
+    
+    
+}

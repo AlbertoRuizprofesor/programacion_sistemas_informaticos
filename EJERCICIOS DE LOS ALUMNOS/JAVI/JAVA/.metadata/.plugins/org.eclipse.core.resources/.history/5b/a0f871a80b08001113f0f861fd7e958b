@@ -1,0 +1,58 @@
+package interfaces;
+
+public class CuentaBancaria extends Banco {
+	
+	private long cuentabancaria;
+	private double saldo;
+	
+	
+	public CuentaBancaria(String nombre_banco, long cuentabancaria, double saldo) {
+		super(nombre_banco);
+		this.cuentabancaria = cuentabancaria;
+		this.saldo = saldo;
+	}
+
+
+	public long getCuentabancaria() {
+		return cuentabancaria;
+	}
+
+
+	public void setCuentabancaria(int cuentabancaria) {
+		this.cuentabancaria = cuentabancaria;
+	}
+
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	
+	
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "CuentaBancaria [getCuentabancaria()=" + getCuentabancaria() + ", getSaldo()=" + getSaldo()
+				+ ", getNombre_banco()=" + getNombre_banco() + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+}

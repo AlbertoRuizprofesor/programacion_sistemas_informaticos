@@ -1,0 +1,58 @@
+package interfaces;
+
+public class Clientes implements DatosEconomicos, DatosPersonales {
+	
+	//ATRIBUTOS
+	private String nombre;
+	
+	
+	//CONSTRUCTOR
+	public Clientes(String nombre) {
+		
+		this.nombre = nombre;
+	}
+	
+	//GETTERS AND SETTERS
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	//MÉTODOS.
+
+	@Override
+	public String pagar(String nombre) {
+		return "Está pagado " + nombre;		
+	}
+	
+	@Override
+	public String enviar_datos(String nombre) {
+		return "Está pagado " + nombre;		
+	}
+	@Override
+	public String firmar(String nombre) {
+		return "Está firmado " + nombre;		
+	}
+	@Override
+	public String mostrar_datos(String nombre) {
+		return "Está pagado " + nombre;		
+	}
+	
+	
+	
+	//TO STRING 
+	@Override
+	public String toString() {
+		return "Clientes [Nombre=" + getNombre() + "]";
+	}
+	
+	
+	
+	
+	
+	
+}

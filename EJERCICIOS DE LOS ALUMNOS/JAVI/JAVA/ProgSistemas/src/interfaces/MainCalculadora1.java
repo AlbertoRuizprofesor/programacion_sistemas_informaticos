@@ -1,0 +1,14 @@
+package interfaces;
+
+
+public class MainCalculadora1 {
+
+	public static void main(String[] args) {
+		
+		Calculadora calculadora = new Calculadora();
+		
+		calculadora.mostrar(2, 8);
+
+	}
+
+}

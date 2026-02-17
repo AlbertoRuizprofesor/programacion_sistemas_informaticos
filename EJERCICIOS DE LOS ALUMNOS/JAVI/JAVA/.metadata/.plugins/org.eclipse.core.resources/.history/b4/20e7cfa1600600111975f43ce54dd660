@@ -1,0 +1,20 @@
+package POO;
+
+public class Alumno extends Persona {
+
+	public Alumno(String nombre, String apellidos, int edad) {
+		super(nombre, apellidos, edad);
+	}
+
+	@Override
+	public String toString() {
+	    // Reemplazamos el nombre de la clase padre por "Alumno" 
+	    // y añadimos los datos específicos.
+	    return "Alumno [nombre=" + getNombre() + ", apellidos=" + getApellidos() + 
+	           ", edad=" + getEdad()+"]";
+	}
+	
+	
+	
+
+}

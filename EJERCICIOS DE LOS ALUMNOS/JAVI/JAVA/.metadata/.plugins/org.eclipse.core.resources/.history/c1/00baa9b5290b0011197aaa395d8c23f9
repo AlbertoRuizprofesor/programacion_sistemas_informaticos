@@ -1,0 +1,55 @@
+package conectarDb.copy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertarDatos {
+
+    public static void main(String[] args) {
+
+        String url = "jdbc:mysql://localhost/empresa3"; 
+        String user = "root";
+        String pass = "";
+
+        // 1. EL SQL SOLO LLEVA LA ESTRUCTURA Y '?'
+        String sql = "INSERT INTO clientes33 (id, nif, nombre, edad) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // 2. RELLENAMOS LOS DATOS DINÁMICAMENTE
+            
+            // Fila 1: Anabel
+            pstmt.setInt(1, 1);
+            pstmt.setString(2, "122345");
+            pstmt.setString(3, "Anabel");
+            pstmt.setInt(4, 32);
+            pstmt.addBatch(); // Añadimos al lote
+
+            // Fila 2: Luis
+            pstmt.setInt(1, 2);
+            pstmt.setString(2, "999988");
+            pstmt.setString(3, "Luis");
+            pstmt.setInt(4, 22);
+            pstmt.addBatch();
+
+            // Fila 3: Juan
+            pstmt.setInt(1, 3);
+            pstmt.setString(2, "1240949");
+            pstmt.setString(3, "Juan");
+            pstmt.setInt(4, 42);
+            pstmt.addBatch();
+
+            // 3. EJECUTAMOS TODO EL LOTE
+            int[] resultados = pstmt.executeBatch();
+
+            System.out.println("Inserción exitosa. Filas añadidas: " + resultados.length);
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar datos: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

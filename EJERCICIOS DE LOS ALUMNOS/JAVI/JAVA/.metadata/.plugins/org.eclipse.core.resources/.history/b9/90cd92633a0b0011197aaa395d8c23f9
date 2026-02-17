@@ -1,0 +1,66 @@
+package maven2sql;
+
+import java.sql.*;
+
+public class GestionRadio {
+
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/radio_db?serverTimezone=UTC";
+        String user = "root";
+        String pass = "";
+
+        // Moldes SQL
+        String sqlInsert = "INSERT INTO emisoras (id, nombre, frecuencia, estilo) VALUES (?, ?, ?, ?)";
+        String sqlSelect = "SELECT * FROM emisoras";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+            
+            // --- FASE DE INSERCIÓN (BATCH) ---
+            try (PreparedStatement pstmtInsert = conn.prepareStatement(sqlInsert)) {
+                
+                // Emisora A al G (Tu lógica de IDs únicos 10-16)
+                int[][] datos = {
+                    {10, "Los 40", "93.9", "Pop"},
+                    {11, "Cadena Dial", "91.7", "Pop Español"},
+                    {12, "RadiOle", "96.9", "Flamenco"},
+                    {13, "Rock FM", "99.9", "Rock"},
+                    {14, "Dub FM", "101.1", "Dubstep"},
+                    {15, "Radio 100", "91.7", "Punk"},
+                    {16, "Joe FM", "104.1", "Classic"}
+                };
+
+                for (Object[] fila : datos) {
+                    pstmtInsert.setInt(1, (int)fila[0]);
+                    pstmtInsert.setString(2, (String)fila[1]);
+                    pstmtInsert.setString(3, (String)fila[2]);
+                    pstmtInsert.setString(4, (String)fila[3]);
+                    pstmtInsert.addBatch();
+                }
+
+                pstmtInsert.executeBatch();
+                System.out.println("✅ Inserción masiva completada.");
+            }
+
+            // --- FASE DE LECTURA (Ahora con PreparedStatement) ---
+            System.out.println("\n--- LISTADO ACTUAL DE EMISORAS (Recuperado con PS) ---");
+            
+            try (PreparedStatement pstmtSelect = conn.prepareStatement(sqlSelect);
+                 ResultSet rs = pstmtSelect.executeQuery()) {
+                
+                // El PreparedStatement prepara la consulta en el servidor
+                // y el ResultSet recibe el flujo de datos (Stream)
+                while (rs.next()) {
+                    System.out.printf("ID: %d | Nombre: %-15s | Frecuencia: %s%n", 
+                                      rs.getInt("id"), 
+                                      rs.getString("nombre"), 
+                                      rs.getString("frecuencia"));
+                }
+            }
+
+        } catch (SQLException e) {
+            // Recuerda: si ejecutas esto dos veces sin limpiar la DB, 
+            // saltará el error de "Duplicate entry" aquí.
+            System.err.println("❌ Error en el flujo de datos: " + e.getMessage());
+        }
+    }
+}

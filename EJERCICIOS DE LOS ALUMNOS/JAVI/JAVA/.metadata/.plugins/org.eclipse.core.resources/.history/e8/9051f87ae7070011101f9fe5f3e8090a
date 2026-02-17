@@ -1,0 +1,29 @@
+package interfaces;
+
+public class MainClientes {
+
+	public static void main(String[] args) {
+		
+		String nombre = "Anabel";
+		String tipo = "Google";
+		
+		Clientes cliente = new Clientes(nombre);
+		Empresa empresa = new Empresa(nombre);
+		
+		System.out.println("-------- CLIENTES ----------");
+		
+		System.out.println(cliente.pagar(nombre));
+		System.out.println(cliente.enviar_datos(nombre));
+		System.out.println(cliente.firmar(nombre));
+		System.out.println(cliente.mostrar_datos(nombre));	
+		
+		System.out.println("-------- EMPRESA ----------");
+		
+		System.out.println(empresa.pagar(nombre));
+		System.out.println(empresa.enviar_datos(nombre));
+		System.out.println(empresa.firmar(nombre));
+		System.out.println(empresa.mostrar_datos(nombre));	
+
+	}
+
+}

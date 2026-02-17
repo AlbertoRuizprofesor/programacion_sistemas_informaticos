@@ -1,0 +1,19 @@
+package poobancos;
+
+public class Main {
+    public static void main(String[] args) {
+
+        CuentaBancaria c1 = new CuentaBancaria("Unicaja", 12345, 200.0);
+        Clientes cliente1 = new Clientes("Paco", 
+        		"12349999S", "600123123", c1);
+
+        cliente1.mostrarDatosCliente();
+
+        c1.ingresar(50);
+        c1.mostrarSaldo();
+
+        c1.sacar(500);  
+        c1.sacar(100);
+        c1.mostrarSaldo();
+    }
+}

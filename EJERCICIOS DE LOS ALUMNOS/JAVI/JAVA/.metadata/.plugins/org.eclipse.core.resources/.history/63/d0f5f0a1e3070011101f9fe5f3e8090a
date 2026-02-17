@@ -1,0 +1,9 @@
+package interfaces;
+
+public class Clientes implements DatosEconomicos, DatosPersonales {
+
+	
+	
+	
+	
+}

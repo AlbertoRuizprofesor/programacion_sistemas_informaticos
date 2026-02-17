@@ -1,0 +1,49 @@
+package jOption;
+
+import javax.swing.JOptionPane;
+import java.util.Random;
+
+public class Ejercicio4 {
+
+    public static void main(String[] args) {
+        String[] options = {"Piedra", "Papel", "Tijeras"};
+        Random random = new Random();
+
+        // 1. El usuario elige
+        var userSelection = JOptionPane.showOptionDialog(
+                null, 
+                "Elige un opción!", 
+                "Juego de Piedra, Papel, Tijeras", 
+                JOptionPane.DEFAULT_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                options, 
+                options[0]
+        );
+
+        // Si el usuario cierra la ventana sin elegir
+        if (userSelection == -1) {
+            System.exit(0);
+        }
+
+        // 2. La computadora elige al azar (0, 1 o 2)
+        int cpuSelection = random.nextInt(3);
+
+        String resultMessage = "Has elegido: " + options[userSelection] + "\n" +
+                               "CPU eligió: " + options[cpuSelection] + "\n\n";
+
+        // 3. Lógica para determinar el ganador
+        if (userSelection == cpuSelection) {
+            resultMessage += "¡Empate!";
+        } else if ((userSelection == 0 && cpuSelection == 2) || 
+                   (userSelection == 1 && cpuSelection == 0) || 
+                   (userSelection == 2 && cpuSelection == 1)) {
+            resultMessage += "¡Has ganado";
+        } else {
+            resultMessage += "¡Perdiste";
+        }
+
+        // 4. Mostrar el resultado final
+        JOptionPane.showMessageDialog(null, resultMessage);
+    }
+}

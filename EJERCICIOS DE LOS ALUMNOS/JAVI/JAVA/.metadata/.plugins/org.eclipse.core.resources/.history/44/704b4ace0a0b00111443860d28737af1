@@ -1,0 +1,24 @@
+package conectarDb;
+
+import java.sql.SQLException;
+
+public class ConexioDb {
+
+	public static void main(String[] args) throws SQLException {
+		Connection conn = null;
+		try {
+			conn = DriveManager.getConnection("jdbc:myql//localhost/empresa"
+					,"root", "");
+			if (conn != null) {
+				System.out.println("Conexion a base da datos ok");
+				conn = close();
+			}
+		}
+		catch(SQLException e) 
+		{System.out.println("Error en la conexion " + e.getMessage());
+		
+
+	}
+
+}
+}

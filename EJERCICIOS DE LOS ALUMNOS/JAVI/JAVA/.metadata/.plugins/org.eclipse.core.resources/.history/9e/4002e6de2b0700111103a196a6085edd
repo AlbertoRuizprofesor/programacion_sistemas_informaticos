@@ -1,0 +1,8 @@
+package pooabstracta;
+
+public class Lavadora extends Electrodomestico {
+	
+	
+	
+
+}

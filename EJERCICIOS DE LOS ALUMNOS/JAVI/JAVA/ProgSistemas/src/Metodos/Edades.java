@@ -1,0 +1,42 @@
+package Metodos;
+
+import java.util.Scanner;
+
+public class Edades {
+	
+	public void calcular_edades(int [] edad) {
+		int suma=0;
+		for (int i=0;i<edad.length;i++) {
+			suma+=edad[i];
+			if (edad[i]<18) {
+				System.out.println(" Es muy pequeño "+edad[i]);
+			}else {
+				System.out.println(" es adulto "+edad[i]);
+			}
+			
+		}
+		System.out.println("la edad media es "+(suma/edad.length));
+		
+	}
+	
+
+	public int[] pedirDatos() {
+		Scanner c=new Scanner(System.in);
+		
+		System.out.print("¿Cuántas edades vas a introducir?: ");
+        int cantidad = c.nextInt();
+		
+		int [] numero=new int[cantidad];
+		
+		for (int i=0;i<numero.length;i++) {
+			System.out.print("Dime la edad "+(i+1)+" : ");
+			numero[i]=c.nextInt();
+		}
+		
+		c.close();
+		return numero;
+		
+		
+	}
+
+}

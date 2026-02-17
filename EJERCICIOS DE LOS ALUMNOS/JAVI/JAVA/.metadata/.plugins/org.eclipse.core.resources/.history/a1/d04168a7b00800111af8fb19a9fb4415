@@ -1,0 +1,37 @@
+package arrayLists;
+
+import java.util.ArrayList;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> lista = new ArrayList<>();
+		ArrayList<String> nombres = new ArrayList<>();
+		ArrayList<Double> ingresos = new ArrayList<>();
+				
+		nombres.add("Anabel Molero");
+		nombres.add("Francisco Benítez");		
+		
+		lista.add(10);
+		lista.add(20);
+		
+		ingresos.add(1540.56);
+		ingresos.add(2500.60);
+		
+		for (int list : lista) {
+			System.out.println("Valor: " + list);
+		}
+		
+		for (String nom : nombres) {
+			System.out.println("Nombre: " + nom);
+		}
+		
+		for (double ing : ingresos) {
+			System.out.println("Ingreso: " + ing);
+		}
+				
+
+	}
+
+}

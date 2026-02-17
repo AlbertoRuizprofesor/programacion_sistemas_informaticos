@@ -1,0 +1,55 @@
+package conectarDb.copy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Productos {
+
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost/empresa3"; 
+        String user = "root";
+        String pass = "";
+
+        // Definimos la plantilla con parámetros '?'
+        String sql = "INSERT INTO productos (id, nombre, precio) VALUES (?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Producto 1
+            pstmt.setInt(1, 1);
+            pstmt.setString(2, "Movil");
+            pstmt.setString(3, "250");
+            pstmt.addBatch(); // Lo añade a la lista de espera
+
+            // Producto 2
+            pstmt.setInt(1, 2);
+            pstmt.setString(2, "Auriculares");
+            pstmt.setString(3, "50");
+            pstmt.addBatch();
+
+            // Producto 3
+            pstmt.setInt(1, 3);
+            pstmt.setString(2, "Portatil");
+            pstmt.setString(3, "670");
+            pstmt.addBatch();
+
+            // Producto 4
+            pstmt.setInt(1, 4);
+            pstmt.setString(2, "Radio");
+            pstmt.setString(3, "98");
+            pstmt.addBatch();
+
+            // Ejecutamos todos los insert de golpe
+            int[] filasAfectadas = pstmt.executeBatch();
+            
+            System.out.println("Inserción masiva exitosa. Filas añadidas: " + filasAfectadas.length);
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar datos: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

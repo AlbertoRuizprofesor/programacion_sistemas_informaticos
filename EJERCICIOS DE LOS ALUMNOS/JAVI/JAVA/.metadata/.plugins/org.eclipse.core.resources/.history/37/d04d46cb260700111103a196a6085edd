@@ -1,0 +1,16 @@
+package pooabstracta;
+
+public class MainVehiculo {
+
+	public static void main(String[] args) {
+		
+		Coche renault = new Coche("Renault" , "verde", 4, "Megane");
+		Bici bici = new Bici("Orbea", "negro", 2, "EX120");
+		
+		Coche [] coche = new Coche[2];
+		
+		
+
+	}
+
+}

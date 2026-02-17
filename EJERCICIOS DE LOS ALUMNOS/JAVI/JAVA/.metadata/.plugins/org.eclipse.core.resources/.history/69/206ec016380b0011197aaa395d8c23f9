@@ -1,0 +1,49 @@
+package maven2sql;
+
+
+
+import java.sql.*;
+
+public class GestionRadio {
+    public static void main(String[] args) {
+        // 1. Configuración (La llave para abrir el túnel)
+        String url = "jdbc:mysql://localhost:3306/radio_db?useSSL=false&serverTimezone=UTC";
+        String user = "root";
+        String pass = "";
+
+        // 2. Sentencias SQL (Los moldes)
+        String insertSql = "INSERT INTO emisoras (id, nombre, frecuencia, estilo) VALUES (?, ?, ?, ?)";
+        String selectSql = "SELECT * FROM emisoras";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+            System.out.println("✅ Conexión establecida con éxito.");
+
+            // --- PARTE A: INSERTAR ---
+            try (PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
+                pstmt.setInt(1, 101); 
+                pstmt.setString(2, "Rock FM");
+                pstmt.setString(3, "91.7");
+                pstmt.setString(4, "Rock");
+                
+                pstmt.executeUpdate();
+                System.out.println("📻 Emisora insertada correctamente.");
+            }
+
+            // --- PARTE B: MOSTRAR ---
+            try (PreparedStatement pstmt = conn.prepareStatement(selectSql);
+                 ResultSet rs = pstmt.executeQuery()) {
+                
+                System.out.println("\n--- LISTA DE EMISORAS ---");
+                while (rs.next()) {
+                    System.out.println(rs.getInt("id") + " | " + 
+                                     rs.getString("nombre") + " | " + 
+                                     rs.getString("frecuencia") + " MHz");
+                }
+            }
+
+        } catch (SQLException e) {
+            // Aquí es donde la "caja negra" te dice qué ha fallado
+            System.err.println("❌ ERROR: " + e.getMessage());
+        }
+    }
+}

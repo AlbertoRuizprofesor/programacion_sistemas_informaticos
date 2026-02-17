@@ -1,0 +1,18 @@
+package POO;
+
+public class MainPersona {
+
+	public static void main(String[] args) {
+
+		Persona persona = new Persona("María", "De la O", 25);
+
+		Alumno alumno = new Alumno("Javier", "Molero", 32, "DAW", "Lengua");
+
+		Profesor profesor = new Profesor("Juan", "Pérez", 56, "Matemáticas", 1250.50);
+
+		System.out.println(persona.toString());
+		System.out.println(alumno.toString());
+
+	}
+
+}

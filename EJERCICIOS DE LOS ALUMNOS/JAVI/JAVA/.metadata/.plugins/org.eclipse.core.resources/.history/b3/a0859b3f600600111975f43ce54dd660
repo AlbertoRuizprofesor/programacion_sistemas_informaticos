@@ -1,0 +1,19 @@
+package POO;
+
+public class Alumno extends Persona {
+
+	public Alumno(String nombre, String apellidos, int edad) {
+		super(nombre, apellidos, edad);
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Alumno [nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + "]";
+	}
+	
+	
+	
+	
+
+}

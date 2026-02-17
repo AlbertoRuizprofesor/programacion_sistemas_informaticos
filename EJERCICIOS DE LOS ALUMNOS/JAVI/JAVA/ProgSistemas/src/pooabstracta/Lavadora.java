@@ -1,0 +1,63 @@
+package pooabstracta;
+
+public class Lavadora extends Electrodomestico {
+	
+	private double carga;
+	private int kilos;
+	public Lavadora(String color, int peso, String marca, String fabricante, double precio, double carga, int kilos) {
+		super(color, peso, marca, fabricante, precio);
+		this.carga = carga;
+		this.kilos = kilos;
+	}
+	public double getCarga() {
+		return carga;
+	}
+	public void setCarga(double carga) {
+		this.carga = carga;
+	}
+	public int getKilos() {
+		return kilos;
+	}
+	public void setKilos(int kilos) {
+		this.kilos = kilos;
+	}
+	
+    @Override
+    void encender() {
+        System.out.println("Encendiendo " + getMarca() + " con programa AUTO");
+    }
+
+    @Override
+    void apagar() {
+        System.out.println("Apagando " + getMarca() + " finalizado.");
+    }
+
+    @Override
+    void comprar() {
+        System.out.println("Comprando " + getMarca() + " ... compra realizada.");
+    }
+    
+    @Override
+    void devolver() {
+        System.out.println("Devolviendo " + getMarca() + " ... devolución realizada.");
+    }
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Lavadora [Carga=" + getCarga() + ", Kilos=" + getKilos() + ", Color=" + getColor()
+				+ ", Peso=" + getPeso() + ", Marca=" + getMarca() + ", Fabricante=" + getFabricante()
+				+ ", Precio=" + getPrecio() + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

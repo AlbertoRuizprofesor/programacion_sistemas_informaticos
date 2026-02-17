@@ -1,0 +1,7 @@
+package poobancos;
+
+public interface Datos_Personales {
+	
+	    void mostrarDatosCliente();
+	
+}

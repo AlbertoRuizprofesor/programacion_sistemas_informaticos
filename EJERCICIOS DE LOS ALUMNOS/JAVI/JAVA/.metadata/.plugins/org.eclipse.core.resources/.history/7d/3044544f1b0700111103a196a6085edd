@@ -1,0 +1,109 @@
+package Videojuego;
+
+public class Heroe {
+	
+	
+	private String nombre;
+	private int vida;
+	private int mana;
+	private int fuerza;
+	private int destreza;
+	private int inteligencia;
+	private int velocidad;
+	
+	public Heroe(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad) {
+		
+		this.nombre = nombre;
+		this.vida = vida;
+		this.mana = mana;
+		this.fuerza = fuerza;
+		this.destreza = destreza;
+		this.inteligencia = inteligencia;
+		this.velocidad = velocidad;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getVida() {
+		return vida;
+	}
+
+	public void setVida(int vida) {
+		this.vida = vida;
+	}
+
+	public int getMana() {
+		return mana;
+	}
+
+	public void setMana(int mana) {
+		this.mana = mana;
+	}
+
+	public int getFuerza() {
+		return fuerza;
+	}
+
+	public void setFuerza(int fuerza) {
+		this.fuerza = fuerza;
+	}
+
+	public int getDestreza() {
+		return destreza;
+	}
+
+	public void setDestreza(int destreza) {
+		this.destreza = destreza;
+	}
+
+	public int getInteligencia() {
+		return inteligencia;
+	}
+
+	public void setInteligencia(int inteligencia) {
+		this.inteligencia = inteligencia;
+	}
+
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
+	}
+	
+	public void atacar() {
+		System.out.println("El héroe" + nombre + " ataca");		 
+	
+	}
+	
+	public void curar () {
+		setVida(getVida()+ 10);
+		System.out.println("¡La vida de " + getNombre() + " ha subido a " + getVida() + "!");
+    }
+	
+		
+	@Override
+	public String toString() {
+		return "Heroe [nombre=" + nombre + ", vida=" + vida + ", mana=" + mana + ", fuerza=" + fuerza + ", destreza="
+				+ destreza + ", inteligencia=" + inteligencia + ", velocidad=" + velocidad + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

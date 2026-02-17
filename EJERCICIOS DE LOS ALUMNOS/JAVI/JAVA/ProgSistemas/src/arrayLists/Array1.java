@@ -1,0 +1,25 @@
+package arrayLists;
+
+import java.util.ArrayList;
+
+public class Array1 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> nombres = new ArrayList<>();
+		
+		nombres.add("Juan");
+		nombres.add("Francisco");
+		nombres.add("Pepelu");
+		nombres.add("Javier");
+		nombres.add("Anabel");
+		nombres.add("María Teresa");
+		
+		for (String nombre : nombres) {
+			System.out.println("Nombre: " + nombre);
+			
+		}		
+		
+	}
+
+}

@@ -1,0 +1,55 @@
+package interfaces;
+
+public class Empresa extends Clientes {
+
+	private String tipo;
+
+	public Empresa(String nombre, String tipo) {
+		super(nombre);
+		this.tipo = tipo;
+	}
+
+	public Empresa(String nombre) {
+		super(nombre);
+
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	@Override
+	public String pagar(String nombre) {
+		return "Está pagado " + nombre;
+	}
+
+	@Override
+	public String enviar_datos(String nombre) {
+		return "Datos de: " + nombre + " enviados ";
+	}
+
+	@Override
+	public String firmar(String nombre) {
+		return "Está firmado " + nombre;
+	}
+
+	@Override
+	public String mostrar_datos(String nombre) {
+		return "Datos cliente: " + nombre;
+	}
+	
+	@Override
+	public String mostrar_datos(String nombre, String tipo) {
+		return nombre + tipo;
+	}	
+
+	@Override
+	public String toString() {
+		return "Empresa [Tipo = " + getTipo() + ", Nombre = " + getNombre() + "]";
+	}
+
+}

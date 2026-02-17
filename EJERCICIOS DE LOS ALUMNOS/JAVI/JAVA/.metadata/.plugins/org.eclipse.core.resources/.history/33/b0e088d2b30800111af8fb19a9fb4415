@@ -1,0 +1,69 @@
+package arrayLists;
+
+import java.util.ArrayList;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> lista = new ArrayList<>();
+		ArrayList<String> nombres = new ArrayList<>();
+		ArrayList<Double> ingresos = new ArrayList<>();
+
+		nombres.add("Anabel");
+		nombres.add("Francisco");
+		nombres.add("Carmen");
+		nombres.add("Pepe");
+		nombres.add("Manolo");
+		nombres.add("Nuria");
+
+		lista.add(10);
+		lista.add(20);
+		lista.add(80);
+		lista.add(90);
+		lista.add(120);
+		lista.add(85);
+		lista.add(150);
+		lista.add(12);
+
+		ingresos.add(1540.56);
+		ingresos.add(2500.60);
+		ingresos.add(3440.56);
+		ingresos.add(5500.60);
+		ingresos.add(2345.56);
+		ingresos.add(1234.60);
+		ingresos.add(1040.56);
+		ingresos.add(3210.60);
+
+		// --- SECCIÓN DE BORRADO ---
+
+		// Borramos a Francisco sin saber que está en la posición 1
+		nombres.remove("Francisco");
+
+		// Borramos el número 10 (usamos Integer.valueOf para no confundir con índice)
+		lista.remove(Integer.valueOf(10));
+
+		// Borramos ingresos altos usando una condición
+		ingresos.removeIf(ing -> ing > 2000);
+
+		for (
+
+		int list : lista) {
+			System.out.println("Valor: " + list);
+		}
+
+		for (String nom : nombres) {
+			System.out.println("Nombre: " + nom);
+		}
+
+		for (double ing : ingresos) {
+			System.out.println("Ingreso: " + ing);
+		}
+		
+		System.out.println("La lista después de eliminar la primer posición es: " + lista);
+		
+		System.out.println("El tamaño de la lista es: " + lista.size());
+		
+	}
+
+}

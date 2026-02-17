@@ -1,0 +1,15 @@
+package arrayLists;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Ejercicio8 {
+	public static void main(String[] args) {
+
+		var notas = new ArrayList<Double>();
+		var sc = new Scanner(System.in);
+
+	}
+
+}

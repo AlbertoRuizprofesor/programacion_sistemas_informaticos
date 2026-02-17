@@ -1,0 +1,23 @@
+package interfaces;
+
+public class MainBanco {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		CuentaBancaria cuentabanco = new CuentaBancaria("Unicaja", 1234567890, 1550.80);
+		
+		System.out.println("-------- CUNETA BANCARIA ----------");
+
+		System.out.println(cuentabanco.mostrarDatosCliente());
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

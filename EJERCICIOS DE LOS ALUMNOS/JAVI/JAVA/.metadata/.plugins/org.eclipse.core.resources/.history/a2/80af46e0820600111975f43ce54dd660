@@ -1,0 +1,20 @@
+package Videojuego;
+
+public class MainHeroe {
+
+	public static void main(String[] args) {
+		
+		Heroe heroe = new Heroe(null, 0, 0, 0, 0, 0, 0);
+		Guerrero guerrero = new Guerrero(null, 0, 0, 0, 0, 0, 0, 0);
+		
+		guerrero.atacar();
+		guerrero.curar();
+		
+		
+		System.out.println(heroe);
+		System.out.println(guerrero);
+		
+
+	}
+
+}

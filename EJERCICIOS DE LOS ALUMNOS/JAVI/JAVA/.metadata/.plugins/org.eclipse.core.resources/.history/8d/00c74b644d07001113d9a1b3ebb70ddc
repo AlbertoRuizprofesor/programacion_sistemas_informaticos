@@ -1,0 +1,25 @@
+package sobrecarga;
+
+public class MainSobrecarga {
+	
+	public static void main(String[] args) {
+		
+		Sobrecarga sobrecarga1 = new Sobrecarga("Javier" , 20);
+		Sobrecarga sobrecarga2 = new Sobrecarga("Javier");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+
+}

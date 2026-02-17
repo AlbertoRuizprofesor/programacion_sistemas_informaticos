@@ -1,0 +1,14 @@
+package pooabstracta;
+
+public class MainVehiculo {
+
+	public static void main(String[] args) {
+		
+		Coche coche = new Coche();
+		Bici bici = new Bici();
+		
+		
+
+	}
+
+}

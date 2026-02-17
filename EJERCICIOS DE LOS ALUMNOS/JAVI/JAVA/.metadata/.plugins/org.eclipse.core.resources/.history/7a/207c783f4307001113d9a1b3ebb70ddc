@@ -1,0 +1,13 @@
+package pooabstracta;
+
+public class MainCalculadora {
+
+	public static void main(String[] args) {
+		
+		Calculadora calculadora = new Calculadora(20, 10);
+		
+		calculadora.mostrar(int a, int b);
+
+	}
+
+}

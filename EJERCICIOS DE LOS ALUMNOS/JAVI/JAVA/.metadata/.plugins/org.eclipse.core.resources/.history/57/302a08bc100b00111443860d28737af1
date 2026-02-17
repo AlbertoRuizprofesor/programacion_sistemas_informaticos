@@ -1,0 +1,30 @@
+// crear base de datos
+package conectarDb;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CrearBaseDeDatos {
+	   //declaramos los diferentes objetos necesarios para nuestra conexión
+	   
+	   public static void main(String[] args) throws SQLException  {
+	      Connection conn = null; // creamos la conexión
+	      Statement stmt=null; // objeto utilizado para crear sentencias sql, creamos objeto statement
+	      String sql="CREATE DATABASE if not exists empresa2";
+	     try {
+	    	 //Desde aquí se encarga del driver JDBC    
+	         conn = DriverManager.getConnection("jdbc:mysql://localhost/","root","");
+	         //controlamos que la conexión ha sido ok
+	         stmt=conn.createStatement(); //creamos un canal que comunica java con la bbdd usando conection
+	         stmt.execute(sql);
+	         System.out.println("La base de datos ok");
+	         conn.close();
+	         stmt.close();
+	      }
+	      catch(SQLException e)                   
+	         {e.printStackTrace();  
+	      }
+	 }
+}
+

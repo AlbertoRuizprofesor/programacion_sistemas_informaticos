@@ -1,0 +1,42 @@
+package Videojuego;
+
+public class Mago extends Heroe {
+    private int potenciaHechizo;
+
+    public Mago(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad, int potenciaHechizo) {
+        super(nombre, vida, mana, fuerza, destreza, inteligencia, velocidad);
+        this.potenciaHechizo = potenciaHechizo;
+    }    
+
+    public int getPotenciaHechizo() {
+		return potenciaHechizo;
+	}
+
+	public void setPotenciaHechizo(int potenciaHechizo) {
+		this.potenciaHechizo = potenciaHechizo;
+	}
+
+	public void lanzarBolaFuego() {
+        if (getMana() >= 20) {
+            setMana(getMana() - 20); // Consume recurso
+            System.out.println(getNombre() + " lanza fuego. Maná restante: " + getMana());
+        } else {
+            System.out.println("¡No tienes suficiente maná!");
+        }
+    }
+
+    public void meditar() {
+        setMana(getMana() + 50); // Recupera recurso
+        System.out.println(getNombre() + " ha recuperado su energía mágica.");
+    }
+
+	@Override
+	public String toString() {
+		return "Mago [getPotenciaHechizo()=" + getPotenciaHechizo() + ", getNombre()=" + getNombre() + ", getVida()="
+				+ getVida() + ", getMana()=" + getMana() + ", getFuerza()=" + getFuerza() + ", getDestreza()="
+				+ getDestreza() + ", getInteligencia()=" + getInteligencia() + ", getVelocidad()=" + getVelocidad()
+				+ ", curar()=" + curar() + "]";
+	}
+    
+    
+}

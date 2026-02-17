@@ -1,0 +1,44 @@
+package interfaces;
+
+
+public class MainCalculadora1 implements Operaciones {
+
+	public static void main(String[] args) {
+		
+		Calculadora calculadora = new Calculadora();
+		
+		calculadora.mostrar(20, 10);
+
+	}
+
+	@Override
+	public int sumar(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int restar(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int multi(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int divi(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void mostrar(int a, int b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

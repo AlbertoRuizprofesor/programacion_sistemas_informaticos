@@ -1,0 +1,32 @@
+public class Array9 {
+
+    private String nombre;
+    private double nota;
+
+    public Alumno(String nombre, double nota) {
+        this.nombre = nombre;
+        this.nota = nota;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " - Nota: " + nota;
+    }
+}
+Main
+import java.util.ArrayList;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+
+        var alumnos = new ArrayList<Alumno>();
+
+        alumnos.add(new Alumno("Ana", 7.5));
+        alumnos.add(new Alumno("Luis", 8.0));
+        alumnos.add(new Alumno("Marta", 6.5));
+
+        for (var alumno : alumnos) {
+            System.out.println(alumno);
+        }
+    }
+}

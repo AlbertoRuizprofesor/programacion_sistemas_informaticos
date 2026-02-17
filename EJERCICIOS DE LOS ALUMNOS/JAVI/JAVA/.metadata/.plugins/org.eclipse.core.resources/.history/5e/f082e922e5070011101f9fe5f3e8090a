@@ -1,0 +1,18 @@
+package interfaces;
+
+public class MainClientes {
+
+	public static void main(String[] args) {
+		
+		String nombre = "Anabel";
+		
+		Clientes cliente = new Clientes(nombre);
+		
+		System.out.println(cliente.pagar(nombre));
+		System.out.println(cliente.enviar_datos(nombre));
+		System.out.println(cliente.firmar(nombre));
+		System.out.println(cliente.mostrar_datos(nombre));		
+
+	}
+
+}

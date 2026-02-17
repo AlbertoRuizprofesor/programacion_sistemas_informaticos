@@ -1,0 +1,41 @@
+package conectarDb.copy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement; // Cambiado de Statement a PreparedStatement
+import java.sql.SQLException;
+
+public class CrearBaseDeDatos {
+
+    public static void main(String[] args) {
+        Connection conn = null;
+        // Cambiamos el tipo de objeto a PreparedStatement
+        PreparedStatement pstmt = null; 
+        
+        String sql = "CREATE DATABASE IF NOT EXISTS empresa2";
+
+        try {
+            // Establecemos la conexión
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/", "root", "");
+
+            // Preparamos la sentencia SQL antes de ejecutarla
+            pstmt = conn.prepareStatement(sql); 
+
+            // Ejecutamos la sentencia
+            pstmt.execute();
+
+            System.out.println("La base de datos creada: ok");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Es buena práctica cerrar los recursos en el bloque finally
+            try {
+                if (pstmt != null) pstmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+}

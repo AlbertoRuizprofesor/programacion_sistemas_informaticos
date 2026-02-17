@@ -1,0 +1,23 @@
+package arrayLists;
+
+import java.util.ArrayList;
+
+public class MainArray9 {
+	
+    public static void main(String[] args) {
+    	
+    	var alumnos = new ArrayList<Array9>();
+    	
+    	alumnos.add(new Array9("Juan" ,25));
+    	alumnos.add(new Array9("José" ,35));
+    	alumnos.add(new Array9("Ana" ,25));
+    	alumnos.add(new Array9("Juan" ,25));
+    	
+    	for (var alumno : alumnos) {
+    		System.out.println("Alumno: " + alumno);
+    	}
+    	
+    	
+    	
+    }
+}

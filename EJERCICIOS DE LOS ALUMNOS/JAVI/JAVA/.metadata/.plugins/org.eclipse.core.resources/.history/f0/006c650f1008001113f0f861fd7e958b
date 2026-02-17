@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+
+        CuentaBancaria c1 = new CuentaBancaria("Banco CENEC", 12345, 200.0);
+        Clientes cliente1 = new Clientes("Antonio", 
+        		"12345678A", "600123123", c1);
+
+        cliente1.mostrarDatosCliente();
+
+        c1.ingresar(50);
+        c1.mostrarSaldo();
+
+        c1.sacar(500);   // saldo insuficiente
+        c1.sacar(100);
+        c1.mostrarSaldo();
+    }
+}

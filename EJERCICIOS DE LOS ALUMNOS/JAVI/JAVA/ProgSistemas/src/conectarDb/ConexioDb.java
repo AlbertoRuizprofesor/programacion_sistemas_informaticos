@@ -1,0 +1,25 @@
+package conectarDb;
+
+import java.sql.Connection; 
+import java.sql.DriverManager; 
+import java.sql.SQLException;
+
+public class ConexioDb {
+
+    public static void main(String[] args) {
+       
+        String url = "jdbc:mysql://localhost/tienda_fp_techstore"; 
+        String user = "root";
+        String pass = "";
+
+        
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+            if (conn != null) {
+                System.out.println("Conexión a la base de datos OK");
+            }
+        } catch (SQLException e) {
+            System.err.println("Error en la conexión: " + e.getMessage());
+        }
+    }
+}
+

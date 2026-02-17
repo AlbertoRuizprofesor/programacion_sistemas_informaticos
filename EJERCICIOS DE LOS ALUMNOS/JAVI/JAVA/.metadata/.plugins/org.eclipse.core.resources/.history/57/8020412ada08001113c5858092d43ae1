@@ -1,0 +1,43 @@
+package arrayLists;
+
+import java.util.ArrayList;
+
+/*		1.	Crear clase Producto
+		o	nombre
+		o	precio
+		2.	Guardar 4 productos
+		3.	Mostrar el producto más caro  
+ */
+
+public class MainProducto {
+
+	public static void main(String[] args) {
+		
+		var productos = new ArrayList<Producto>();
+		
+		productos.add(new Producto("Lavadora", 1200.50));
+		productos.add(new Producto("Siemens", 450));
+		productos.add(new Producto("Miele", 670));
+		productos.add(new Producto("Batidora", 670));
+		
+		Producto masCaro =productos.get(0);
+		
+		for (var p :productos) {
+			
+			
+		}
+
+
+		
+
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

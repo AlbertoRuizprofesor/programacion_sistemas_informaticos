@@ -1,0 +1,33 @@
+package conectarDb;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Productos {
+
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost/empresa2"; 
+        String user = "root";
+        String pass = "";
+
+       
+        String update = "INSERT INTO productos (id, nombre, precio) VALUES "
+                      + "(1, 'Movil', '250'), "
+                      + "(2, 'Auriculares', '50'), "
+                      + "(3, 'Portatil', '670'), "
+                      + "(4, 'Radio', '98')";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             Statement stmt = conn.createStatement()) {
+            
+            int filasAfectadas = stmt.executeUpdate(update);
+            System.out.println("Inserción masiva exitosa. Filas añadidas: " + filasAfectadas);
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar datos: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

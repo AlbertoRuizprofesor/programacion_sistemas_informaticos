@@ -1,0 +1,30 @@
+package POO;
+
+public class Camion extends Vehiculo {
+	
+	private int peso;
+
+	public Camion(String motor, int ruedas, String modelo, double precio, int peso) {
+		super(motor, ruedas, modelo, precio);
+		this.peso = peso;
+	}
+
+	public int getPeso() {
+		return peso;
+	}
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+	
+	@Override
+	public void acelerar() {
+		System.out.println("El camion acelera.");
+	}
+	
+	@Override
+	public void frenar() {
+		System.out.println("El camion frena.");
+	}
+
+}

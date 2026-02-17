@@ -1,0 +1,44 @@
+package conectarDb.copy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement; // Cambiado de Statement
+import java.sql.SQLException;
+
+public class InsertarDatos {
+    
+    public static void main(String[] args) {
+        
+        String url = "jdbc:mysql://localhost/empresa3"; // Asegúrate de que apunte a la DB correcta
+        String user = "root";
+        String pass = "";
+
+        // Usamos '?' como placeholders para los valores
+        String sql = "INSERT INTO clientes33 (id, nif, nombre, edad) VALUES "
+        	
+        + "('1', '122345', 'Anabel' , 32)"
+        + "('2', '999988', 'Luis' , 22)"
+        + "('3', '1240949', 'Juan' , 42)"
+        + "('4', '1225959', 'Rosa' , 12)";
+      
+        // El try-with-resources cierra automáticamente los recursos al terminar
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            // Asignamos los valores a cada '?' por su índice (empezando en 1)
+            pstmt.setInt(1, 4);              // id
+            pstmt.setString(2, "999933");    // nif
+            pstmt.setString(3, "María");     // nombre
+            pstmt.setString(4, "44");        // edad
+
+            // Ejecutamos la inserción
+            int filasAfectadas = pstmt.executeUpdate();
+            
+            System.out.println("Inserción exitosa. Filas añadidas: " + filasAfectadas);
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar datos: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,18 @@
+package arrayLists;
+
+import java.util.ArrayList;
+
+public class MainArray7 {
+
+	public static void main(String[] args) {
+
+		var persona = new ArrayList<Array7>();
+
+		
+		for (var persona : personas) {
+			System.out.println(persona);
+		}
+
+	}
+
+}

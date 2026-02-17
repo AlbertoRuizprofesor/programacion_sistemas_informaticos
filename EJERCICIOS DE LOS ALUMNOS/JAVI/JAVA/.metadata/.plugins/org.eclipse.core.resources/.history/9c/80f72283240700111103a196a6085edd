@@ -1,0 +1,31 @@
+package pooabstracta;
+
+public class Bici extends Vehiculo {
+
+	private int precio;
+
+	public Bici(int precio) {
+		super();
+		this.precio = precio;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+}

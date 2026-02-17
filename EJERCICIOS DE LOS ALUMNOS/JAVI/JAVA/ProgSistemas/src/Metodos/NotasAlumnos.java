@@ -1,0 +1,56 @@
+package Metodos;
+
+import java.util.Scanner;
+
+public class NotasAlumnos {
+
+    // Calcula la suma total de las notas
+    public double calcularSuma(double[] notas) {
+        double suma = 0;
+        for (double nota : notas) {
+            suma += nota;
+        }
+        return suma;
+    }
+
+    // Calcula la media aritmética
+    public double calcularMedia(double[] notas) {
+        if (notas.length == 0) return 0;
+        return calcularSuma(notas) / notas.length;
+    }
+
+    // Determina si el alumno aprobó (asumiendo que se aprueba con 5)
+    public String estadoAlumno(double media) {
+        return (media >= 5) ? "Aprobado" : "Suspenso";
+    }
+
+    // Muestra el resumen de resultados
+    public void mostrarResultados(double[] notas) {
+        double media = calcularMedia(notas);
+        String[] conceptos = {"Suma Total", "Media Final", "Estado"};
+        
+        System.out.println("\n--- Resumen de Calificaciones ---");
+        System.out.println(conceptos[0] + ": " + calcularSuma(notas));
+        System.out.println(conceptos[1] + ": " + String.format("%.2f", media));
+        System.out.println(conceptos[2] + ": " + estadoAlumno(media));
+    }
+
+    // Pide al usuario cuántas notas quiere ingresar y sus valores
+    public double[] pedirNotas() {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("¿Cuántas notas vas a introducir?: ");
+        int cantidad = sc.nextInt();
+        
+        double[] notas = new double[cantidad];
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("Introduce la nota " + (i + 1) + ": ");
+            notas[i] = sc.nextDouble();
+        }
+
+        // Nota: En aplicaciones reales, no cerramos System.in si vamos a seguir usándolo,
+        // pero lo mantenemos según tu plantilla original.
+        return notas;
+    }
+}

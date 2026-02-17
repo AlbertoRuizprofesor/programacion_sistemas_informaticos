@@ -1,0 +1,8 @@
+package interfaces;
+
+public class CuentaBancaria extends Banco {
+	
+	private int cuentabancaria;
+	private double saldo;
+
+}

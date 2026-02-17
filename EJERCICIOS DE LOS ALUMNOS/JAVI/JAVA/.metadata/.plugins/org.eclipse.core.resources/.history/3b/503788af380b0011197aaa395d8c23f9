@@ -1,0 +1,74 @@
+package maven2sql; // Corregido: Ahora coincide con tu estructura Maven
+
+import java.sql.*;
+
+public class GestionRadio {
+
+    public static void main(String[] args) {
+        // Datos de conexión (Asegúrate de que radio_db esté creada)
+        String url = "jdbc:mysql://localhost:3306/radio_db?serverTimezone=UTC";
+        String user = "root";
+        String pass = "";
+
+        String sqlInsert = "INSERT INTO emisoras (id, nombre, frecuencia, estilo) VALUES (?, ?, ?, ?)";
+        String sqlSelect = "SELECT * FROM emisoras";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+            
+            // --- FASE DE INSERCIÓN (BATCH) ---
+            try (PreparedStatement pstmt = conn.prepareStatement(sqlInsert)) {
+                
+                // Emisora A
+                pstmt.setInt(1, 10); 
+                pstmt.setString(2, "Los 40");
+                pstmt.setString(3, "93.9");
+                pstmt.setString(4, "Pop");
+                pstmt.addBatch();
+
+                // Emisora B
+                pstmt.setInt(1, 11);
+                pstmt.setString(2, "Cadena Dial");
+                pstmt.setString(3, "91.7");
+                pstmt.setString(4, "Pop Español");
+                pstmt.addBatch();
+                
+                // Emisora C
+                pstmt.setInt(1, 12); 
+                pstmt.setString(2, "RadiOle");
+                pstmt.setString(3, "96.9");
+                pstmt.setString(4, "Flamenco");
+                pstmt.addBatch();
+                
+                // Emisora D
+                pstmt.setInt(1, 13); 
+                pstmt.setString(2, "Rock FM");
+                pstmt.setString(3, "99.9");
+                pstmt.setString(4, "Rock");
+                pstmt.addBatch();
+                
+                // Emisora E
+                pstmt.setInt(1, 14); 
+                pstmt.setString(2, "Los 40");
+                pstmt.setString(3, "93.9");
+                pstmt.setString(4, "Pop");
+                pstmt.addBatch();
+
+                pstmt.executeBatch();
+                System.out.println("✅ Datos enviados con éxito desde el paquete maven2sql.");
+            }
+
+            // --- FASE DE LECTURA ---
+            try (Statement stmt = conn.createStatement();
+                 ResultSet rs = stmt.executeQuery(sqlSelect)) {
+                
+                System.out.println("\n--- LISTADO ACTUAL DE EMISORAS ---");
+                while (rs.next()) {
+                    System.out.println("ID: " + rs.getInt("id") + " - " + rs.getString("nombre"));
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.println("❌ Error: " + e.getMessage());
+        }
+    }
+}

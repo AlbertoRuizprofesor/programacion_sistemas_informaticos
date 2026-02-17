@@ -1,0 +1,13 @@
+package POO;
+
+public class Alumno extends Persona {
+
+	public Alumno(String nombre, String apellidos, int edad) {
+		super(nombre, apellidos, edad);
+	}
+	
+	
+	
+	
+
+}

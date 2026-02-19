@@ -1,0 +1,33 @@
+package conectarDb;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class InsertarDatos {
+    
+    public static void main(String[] args) {
+        
+        String url = "jdbc:mysql://localhost/empresa1"; 
+        String user = "root";
+        String pass = "";
+
+        // SINTAXIS CORRECTA: INSERT INTO tabla (columnas) VALUES (valores)
+        String update = "INSERT INTO empresa2.clientes22 (id, nif, nombre, edad) "
+                      + "VALUES (2, '1234566', 'Ana', '24')";
+
+        // Usamos try-with-resources para un código más limpio y seguro
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             Statement stmt = conn.createStatement()) {
+            
+            // Usamos executeUpdate para INSERT, UPDATE o DELETE
+            int filasAfectadas = stmt.executeUpdate(update);
+            
+            System.out.println("Inserción exitosa. Filas añadidas: " + filasAfectadas);
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar datos: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

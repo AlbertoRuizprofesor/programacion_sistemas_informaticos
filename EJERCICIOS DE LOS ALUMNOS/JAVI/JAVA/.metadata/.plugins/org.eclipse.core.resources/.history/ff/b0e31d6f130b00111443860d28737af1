@@ -1,0 +1,31 @@
+package conectarDb;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CrearTabla {
+	   
+	   
+	   public static void main(String[] args) throws SQLException  {
+	      Connection conn = null; 
+	      Statement stmt=null; 
+	      String sql="INSERT INTO clientes22 (id INT PRIMARY KEY,"
+	    		  + "nif VARCHAR(10) NOT NULL,"
+	    		  + "nombre VARCHAR(60) NOT NULL,"
+	    		  + "edad VARCHAR(2))";
+	     try {
+	    	 
+	         conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa2","root","");
+	         
+	         stmt=conn.createStatement(); 
+	         stmt.execute(update);
+	         System.out.println("La tabla ha sido creada");
+	         conn.close();
+	         stmt.close();
+	      }
+	      catch(SQLException e)                   
+	         {e.printStackTrace();  
+	      }
+	 }
+}

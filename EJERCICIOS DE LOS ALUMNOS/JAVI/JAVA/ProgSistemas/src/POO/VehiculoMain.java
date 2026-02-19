@@ -1,0 +1,30 @@
+package POO;
+
+public class VehiculoMain {
+
+	public static void main(String[] args) {
+
+		Vehiculo vehiculo = new Vehiculo("Diesel", 4, "S350", 25000.50);
+		Coche coche = new Coche("Gasolina", 4, "E290", 34000.60, true);
+		Moto moto = new Moto("Gasolina", 2, "Yamaha Aerox", 3500, "49cc");
+		Camion camion = new Camion("Diesel", 8, "Pegaso 120", 65000, 50000);
+
+		vehiculo.acelerar();
+		vehiculo.frenar();
+		coche.acelerar();
+		coche.frenar();
+		moto.acelerar();
+		moto.frenar();
+		camion.acelerar();
+		camion.frenar();
+
+		System.out.println("---- TO STRINGS ----");
+
+		System.out.println(vehiculo);
+		System.out.println(coche);
+		System.out.println(moto);
+		System.out.println(camion);
+
+	}
+
+}

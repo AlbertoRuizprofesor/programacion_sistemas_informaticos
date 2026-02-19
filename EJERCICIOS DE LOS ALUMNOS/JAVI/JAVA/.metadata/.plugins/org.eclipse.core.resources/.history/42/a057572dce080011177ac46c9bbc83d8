@@ -1,0 +1,33 @@
+package arrayLists;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Ejercicio8 {
+	public static void main(String[] args) {
+
+		var notas = new ArrayList<Double>();
+		var sc = new Scanner(System.in);
+		
+		for(int i= 0; i < 5; i++) {
+			System.out.println("Introduzca la nota " + (i+1) + " : ");
+			notas.add(sc.nextDouble());
+		}
+
+		double suma = 0;
+		
+		for(double nota : notas) {
+			suma = suma + nota;
+		}
+		
+		System.out.println("La nota media es: " + suma / notas.size());
+		System.out.println("Mayor: " + Collections.max(notas));
+		System.out.println("Mayor: " + Collections.min(notas));		
+		
+		
+		sc.close();
+		
+	}
+
+}

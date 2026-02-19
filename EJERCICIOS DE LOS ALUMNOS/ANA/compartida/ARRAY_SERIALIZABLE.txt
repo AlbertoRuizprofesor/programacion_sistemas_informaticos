@@ -1,0 +1,101 @@
+CLASE VIDEOJUEGOS1:
+
+
+
+
+
+package Serializacion_ARRAY;
+import java.io.*;
+
+public class Videojuegos1 implements Serializable{
+	private int codigo;
+	private String nombre;
+	private String precio;
+	public Videojuegos1(int codigo, String nombre, String precio) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.precio = precio;
+	}
+	@Override
+	public String toString() {
+		return "Videojuegos1 [codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + "]";
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+CLASE DE EJERCICIO_ARRAY:
+
+
+package Serializacion_ARRAY;
+import java.io.*;
+import java.util.ArrayList;
+
+public class Ejercicio_array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//crear array
+		ArrayList<Videojuegos1> videojuegos=new ArrayList<>();
+		
+		videojuegos.add(new Videojuegos1(1,"Resident evil","70 euros"));
+		videojuegos.add(new Videojuegos1(2,"Kindomg Hearts","80 euros"));
+		videojuegos.add(new Videojuegos1(3,"Crash bandicoot","60 euros"));
+		
+		// Serializar el objeto
+	     try {
+	    	 
+	         FileOutputStream archivoSalida = new FileOutputStream
+	        		 ("c:\\videojuegos\\videojuegos22.ser");
+	         ObjectOutputStream objetoSalida = new ObjectOutputStream
+	        		 (archivoSalida);
+	         
+	         objetoSalida.writeObject(videojuegos);
+	         objetoSalida.close();
+	         archivoSalida.close();
+	         
+	         System.out.println("Objeto serializado correctamente.");
+	         
+	     } catch (IOException e) {
+	         e.printStackTrace();
+	     }
+	 
+    // Deserializar el objeto
+    try {
+   	 
+        FileInputStream archivoEntrada = new FileInputStream
+       		 ("c:\\videojuegos\\videojuegos22.ser");
+        ObjectInputStream objetoEntrada = new ObjectInputStream
+       		 (archivoEntrada);
+        
+        ArrayList<Videojuegos1> videojuegosDeserializada =
+                (ArrayList<Videojuegos1>) objetoEntrada.readObject();
+        
+        objetoEntrada.close();
+        archivoEntrada.close();
+        
+        System.out.println("Objeto deserializado correctamente.");
+		System.out.println(videojuegosDeserializada);
+        
+    } catch (IOException | ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+
+		
+		
+
+	}
+
+}

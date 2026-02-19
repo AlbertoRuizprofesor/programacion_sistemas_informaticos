@@ -1,0 +1,5 @@
+package poobancos;
+
+public interface Datos_Personales {
+
+}

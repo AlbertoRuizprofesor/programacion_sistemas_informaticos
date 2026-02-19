@@ -1,0 +1,92 @@
+package pooabstracta;
+
+abstract class Electrodomestico {
+	
+	private String color;
+	private int peso;
+	private String marca;
+	private String fabricante;
+	private double precio;
+	
+	
+	public Electrodomestico(String color, int peso, String marca, String fabricante, double precio) {
+		super();
+		this.color = color;
+		this.peso = peso;
+		this.marca = marca;
+		this.fabricante = fabricante;
+		this.precio = precio;
+	}
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+	public int getPeso() {
+		return peso;
+	}
+
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+
+
+	public String getMarca() {
+		return marca;
+	}
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+	public String getFabricante() {
+		return fabricante;
+	}
+
+
+	public void setFabricante(String fabricante) {
+		this.fabricante = fabricante;
+	}
+
+
+	public double getPrecio() {
+		return precio;
+	}
+
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+	
+	
+	abstract void encender();
+	abstract void apagar();
+	abstract void comprar();
+	abstract void devolver();
+	
+		
+
+
+	@Override
+	public String toString() {
+		return "Electrodomestico [getColor()=" + getColor() + ", getPeso()=" + getPeso() + ", getMarca()=" + getMarca()
+				+ ", getFabricante()=" + getFabricante() + ", getPrecio()=" + getPrecio() + "]";
+	}
+	
+	
+	
+	
+	
+	
+
+}

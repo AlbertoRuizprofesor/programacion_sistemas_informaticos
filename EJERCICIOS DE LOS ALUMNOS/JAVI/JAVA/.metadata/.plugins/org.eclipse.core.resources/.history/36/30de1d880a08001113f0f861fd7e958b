@@ -1,0 +1,45 @@
+package interfaces;
+
+public class Clientes1 extends Banco {
+	
+	private int cuenta;
+
+	public Clientes1(String nombre_banco, int cuenta) {
+		super(nombre_banco);
+		this.cuenta = cuenta;
+	}
+
+	public int getCuenta() {
+		return cuenta;
+	}
+
+	public void setCuenta(int cuenta) {
+		this.cuenta = cuenta;
+	}
+	
+	
+	@Override
+	public void mostrarDatosCliente(); {
+		
+		System.out.print());
+		
+	}
+		
+	
+
+	@Override
+	public String toString() {
+		return "Clientes1 [getCuenta()=" + getCuenta() + ", getNombre_banco()=" + getNombre_banco() + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

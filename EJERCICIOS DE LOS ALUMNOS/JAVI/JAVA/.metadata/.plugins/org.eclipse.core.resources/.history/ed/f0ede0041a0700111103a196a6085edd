@@ -1,0 +1,56 @@
+package Videojuego;
+
+public class Cazador extends Heroe {
+	
+    private int flechas;
+
+    public Cazador(String nombre, int vida, int mana, int fuerza, int destreza, int inteligencia, int velocidad, int flechas) {
+        super(nombre, vida, mana, fuerza, destreza, inteligencia, velocidad);
+        this.flechas = flechas;
+    }
+    
+    public int getFlechas() {
+		return flechas;
+	}
+
+	public void setFlechas(int flechas) {
+		this.flechas = flechas;
+	}
+	
+	@Override
+	public void atacar () {
+		setDestreza(getDestreza()+ 10);
+		System.out.println("¡La destreza de " + getNombre() + " ha subido a " + getDestreza() + "!");
+    }
+	
+	@Override
+	public void curar () {
+		setVida(getVida()+ 20);
+		System.out.println("¡La vida de " + getNombre() + " ha subido a " + getVida() + "!");
+    }
+
+	public void disparoRapido() {
+        if (this.flechas >= 3) {
+            this.flechas -= 3; // Gasta munición
+            setVelocidad(getVelocidad() + 5); // Aumenta su adrenalina (velocidad) temporalmente
+            System.out.println(getNombre() + " dispara una ráfaga. Flechas: " + this.flechas);
+        } else {
+            System.out.println("No tienes suficientes flechas para el disparo rápido.");
+        }
+    }
+
+    public void recolectarFlechas() {
+        this.flechas += 10;
+        System.out.println(getNombre() + " ha fabricado 10 flechas nuevas.");
+    }
+
+	@Override
+	public String toString() {
+		return "Cazador [getFlechas()=" + getFlechas() + ", getNombre()=" + getNombre() + ", getVida()=" + getVida()
+				+ ", getMana()=" + getMana() + ", getFuerza()=" + getFuerza() + ", getDestreza()=" + getDestreza()
+				+ ", getInteligencia()=" + getInteligencia() + ", getVelocidad()=" + getVelocidad() + ", curar()="
+				+ curar() + "]";
+	}
+    
+    
+}

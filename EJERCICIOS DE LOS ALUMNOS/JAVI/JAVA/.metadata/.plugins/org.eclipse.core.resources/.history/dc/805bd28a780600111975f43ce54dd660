@@ -1,0 +1,16 @@
+package Videojuego;
+
+public class Heroe {
+	
+	
+	private String nombre;
+	private int vida;
+	private int mana;
+	private int fuerza;
+	private int destreza;
+	private int inteligencia;
+	private int velocidad;
+	
+	
+
+}

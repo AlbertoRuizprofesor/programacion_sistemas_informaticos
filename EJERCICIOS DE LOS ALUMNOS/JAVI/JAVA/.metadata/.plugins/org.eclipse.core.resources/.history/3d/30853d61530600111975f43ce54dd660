@@ -1,0 +1,15 @@
+package Arrays;
+
+public class MainEjemplo {
+
+    public static void main(String[] args) {
+        // Instanciamos la clase de lógica
+        Ejemplo gestion = new Ejemplo();
+        
+        // Pedimos los datos al usuario
+        double[] notasIngresadas = gestion.pedirNotas();
+        
+        // Procesamos y mostramos la lista de resultados
+        gestion.mostrarResultados(notasIngresadas);
+    }
+}

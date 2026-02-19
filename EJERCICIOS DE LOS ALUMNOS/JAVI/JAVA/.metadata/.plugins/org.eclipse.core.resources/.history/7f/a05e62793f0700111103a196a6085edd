@@ -1,0 +1,61 @@
+package pooabstracta;
+
+public class Cafetera extends Electrodomestico {
+	
+	private String tipo;
+
+	public Cafetera(String color, int peso, String marca, String fabricante, double precio, String tipo) {
+		super(color, peso, marca, fabricante, precio);
+		this.tipo = tipo;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+	
+	@Override
+    void encender() {
+        System.out.println("Encendiendo " + getMarca() + " con programa AUTO");
+    }
+
+    @Override
+    void apagar() {
+        System.out.println("Apagando " + getMarca() + " finalizado.");
+    }
+
+    @Override
+    void comprar() {
+        System.out.println("Comprando " + getMarca() + " ... compra realizada.");
+    }
+    
+    @Override
+    void devolver() {
+        System.out.println("Devolviendo " + getMarca() + " ... devolución realizada.");
+    }	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Cafetera [Tipo=" + getTipo() + ", Color=" + getColor() + ", Peso=" + getPeso()
+				+ ", Marca=" + getMarca() + ", Fabricante=" + getFabricante() + ", Precio=" + getPrecio()
+				+ "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

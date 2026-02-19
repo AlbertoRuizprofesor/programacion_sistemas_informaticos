@@ -1,0 +1,48 @@
+package pooabstracta;
+
+public class Coche extends Vehiculo {
+	
+	private int precio;
+
+	public Coche(String color, int ruedas, String modelo, int precio) {
+		super(color, ruedas, modelo);
+		this.precio = precio;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Coche [getPrecio()=" + getPrecio() + ", getColor()=" + getColor() + ", getRuedas()=" + getRuedas()
+				+ ", getModelo()=" + getModelo() + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

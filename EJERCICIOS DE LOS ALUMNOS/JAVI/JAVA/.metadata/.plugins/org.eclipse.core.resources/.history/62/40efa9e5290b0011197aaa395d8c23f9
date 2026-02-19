@@ -1,0 +1,45 @@
+package conectarDb.copy;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement; // Cambiado de Statement a PreparedStatement
+import java.sql.SQLException;
+
+public class CrearTabla {
+
+    public static void main(String[] args) {
+        Connection conn = null;
+        // Declaramos el PreparedStatement en lugar de Statement
+        PreparedStatement pstmt = null; 
+
+        String sql = "CREATE TABLE clientes33 ("
+                   + "id INT PRIMARY KEY, "
+                   + "nif VARCHAR(10) NOT NULL, "
+                   + "nombre VARCHAR(60) NOT NULL, "
+                   + "edad VARCHAR(2))";
+
+        try {
+            // Conectamos directamente a la base de datos 'empresa2'
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa2", "root", "");
+
+            // Preparamos la sentencia
+            pstmt = conn.prepareStatement(sql);
+
+            // Ejecutamos la creación de la tabla
+            pstmt.execute();
+
+            System.out.println("La tabla ha sido creada: ok");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Cerramos recursos para evitar fugas de memoria
+            try {
+                if (pstmt != null) pstmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+}

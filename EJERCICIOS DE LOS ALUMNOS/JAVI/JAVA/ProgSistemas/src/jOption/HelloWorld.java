@@ -1,6 +1,8 @@
+package jOption;
+
 import javax.swing.JOptionPane;
 
-public class CalculadoraExpress {
+public class HelloWorld {
     public static void main(String[] args) {
         // 1. Selección de operación
         String[] opciones = {"Sumar", "Restar", "Multiplicar", "Dividir", "Salir"};

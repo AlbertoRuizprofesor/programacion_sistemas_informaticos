@@ -1,0 +1,6 @@
+package interfaces;
+
+public interface DatosEconomicos {
+	String pagar(String nombre);
+	
+}

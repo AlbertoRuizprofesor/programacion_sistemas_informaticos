@@ -1,0 +1,46 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Página-1" id="FIGIWUSf81hHDLxhK5FN">
+    <mxGraphModel dx="765" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-3" edge="1" parent="1" source="bFInRMvM0Ql5F_YWX4Fl-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bFInRMvM0Ql5F_YWX4Fl-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="ALumno&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Realizar Cuestionario" vertex="1">
+          <mxGeometry height="70" width="170" x="140" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Cargar Preguntas" vertex="1">
+          <mxGeometry height="60" width="160" x="440" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Almacenar Puntuación" vertex="1">
+          <mxGeometry height="60" width="160" x="440" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Mostrar Retroaliemntación" vertex="1">
+          <mxGeometry height="60" width="160" x="440" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-8" edge="1" parent="1" source="bFInRMvM0Ql5F_YWX4Fl-2" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="bFInRMvM0Ql5F_YWX4Fl-7" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="160" y="410" as="sourcePoint" />
+            <mxPoint x="320" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-9" edge="1" parent="1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bFInRMvM0Ql5F_YWX4Fl-6" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="310" y="150" as="sourcePoint" />
+            <mxPoint x="460" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bFInRMvM0Ql5F_YWX4Fl-10" edge="1" parent="1" source="bFInRMvM0Ql5F_YWX4Fl-2" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="bFInRMvM0Ql5F_YWX4Fl-4" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="430" y="240" as="sourcePoint" />
+            <mxPoint x="560" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

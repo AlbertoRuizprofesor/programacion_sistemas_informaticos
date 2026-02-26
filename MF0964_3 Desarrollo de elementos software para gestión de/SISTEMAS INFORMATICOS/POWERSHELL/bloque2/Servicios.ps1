@@ -1,4 +1,2 @@
-Get-Service | Out-File c:\reportes\servicios.txt
-
-
+Get-NetIPAddress | Select InterfaceAlias, IPAddress, AddressFamily, PrefixLength
 

@@ -1,0 +1,1 @@
+Get-NetAdapter | Select-Object Name, Status, LinkSpeed | Sort-Object LinkSpeed -Descending

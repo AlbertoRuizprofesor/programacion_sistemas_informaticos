@@ -1,3 +1,4 @@
-$nombre = Read-Host "¿Cómo te llamas?"
-Write-Host "Bienvenido, $nombre"
+Get-NetAdapter | Select Name, Status, MacAddress, LinkSpeed
+
+
 

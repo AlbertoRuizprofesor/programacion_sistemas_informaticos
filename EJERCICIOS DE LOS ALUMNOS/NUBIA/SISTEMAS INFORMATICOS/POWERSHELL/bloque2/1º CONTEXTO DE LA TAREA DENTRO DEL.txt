@@ -1,0 +1,34 @@
+1º CONTEXTO DE LA TAREA DENTRO DEL MÓDULO
+Es algo asi como la empresa tal quiere una aplicación...
+
+2º TIEMPO ESTIMADO DE REALIZACIÓN:
+2.1ENUNCIADO:
+2.2 REQUISITOS TECNICOS
+Rúbrica de Evaluación: 
+Criterios de evaluación	Nivel de Logro
+0%–20%	20%–40%	40%–60%	60%–80%	80%–100%
+
+"siguiendo este modelo de abajo haz esto"
+
+CONSEJOS Y RECOMENDACIONES PARA REALIZAR LA TAREA.
+
+Organización:
+
+Divide la tarea en subtareas claras: casos de uso, actividades, secuencia y estados.
+Define hitos claros para cada subtarea antes de avanzar al siguiente paso.
+Claridad y Detalle:
+
+Usa nombres claros y descriptivos para los actores y casos de uso en los diagramas.
+Representa la multiplicidad y las relaciones correctamente en los diagramas de estados y secuencia.
+Uso de Herramientas:
+
+Experimenta con las herramientas antes de iniciar la tarea. Familiarízate con su interfaz y funciones.
+Guarda copias de seguridad del trabajo en progreso para evitar pérdida de datos.
+Revisión:
+
+Revisa el código para detectar errores o inconsistencias antes de dar por terminada cada etapa.
+Pide a un compañero o instructor que revise el código para identificar posibles mejoras.
+Documentación:
+
+Asegúrate de incluir capturas de pantalla del código en la documentación.
+Explica cada diagrama de forma breve pero clara, destacando cómo cumple los requisitos del sistema.

@@ -1,0 +1,3 @@
+$nombre = Read-Host "¿Cómo te llamas?"
+Write-Host "Bienvenido, $nombre"
+

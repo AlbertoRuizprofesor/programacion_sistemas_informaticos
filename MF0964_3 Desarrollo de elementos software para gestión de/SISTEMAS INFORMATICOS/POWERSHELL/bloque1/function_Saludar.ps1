@@ -4,5 +4,7 @@ function Saludar {
 }
 $nombre = Read-Host "¿Cómo te llamas?"
 $edad = Read-Host "¿Cuántos años tienes?"
+
 Saludar -nombre $nombre -edad $edad
+
 

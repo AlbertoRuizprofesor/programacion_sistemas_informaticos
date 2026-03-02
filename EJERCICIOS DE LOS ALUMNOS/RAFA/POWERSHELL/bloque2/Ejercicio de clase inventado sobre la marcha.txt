@@ -1,0 +1,37 @@
+Crear las carpetas-....
+
+1º InformeMensual
+2º InformeTrimestral
+3º InformeAnual
+
+Crear ficheros en su carpeta correspondiente
+
+1º InformeMensual.txt
+2º InformeTrimestral.txt
+3º InformeAnual.txt
+
+Crear carpeta que se llame InformeFinal
+
+Copiar los tres ficheros en esta carpeta
+
+Crearemos otra carpeta que se llama informe2025revisado
+moveremos todos los txt a esta carpeta
+
+borraremos todas las carpetas excepto informe2025revisado
+
+Capturas de pantalla del resultado y lo copias en un pdf en la carpeta ejercicios de alumnos bloque 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

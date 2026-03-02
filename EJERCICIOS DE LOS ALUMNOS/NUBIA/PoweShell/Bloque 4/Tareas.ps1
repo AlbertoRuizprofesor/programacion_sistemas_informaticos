@@ -1,0 +1,1 @@
+Get-ScheduledTask | Select-Object TaskName, State | Export-Csv "$env:USERPROFILE\Desktop\tareas.csv" -No 

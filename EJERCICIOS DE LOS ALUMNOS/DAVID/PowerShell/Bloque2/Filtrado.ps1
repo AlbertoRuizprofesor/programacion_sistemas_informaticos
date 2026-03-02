@@ -1,0 +1,1 @@
+Get-ChildItem c:/ -Recurse | where-Object {$_.Length -gt 1MB}

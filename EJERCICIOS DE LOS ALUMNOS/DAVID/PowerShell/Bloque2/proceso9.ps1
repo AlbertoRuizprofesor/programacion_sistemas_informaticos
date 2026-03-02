@@ -1,0 +1,1 @@
+Get-Service | Where-Object { $_.Status -eq 'Stopped' } | Format-Table | Out-File -FilePath ".\Reportes\servicios_detenidos.txt"

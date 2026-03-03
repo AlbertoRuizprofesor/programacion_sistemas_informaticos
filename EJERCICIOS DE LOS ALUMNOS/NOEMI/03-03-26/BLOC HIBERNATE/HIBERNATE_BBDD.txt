@@ -1,0 +1,244 @@
+MODELO2 PRODUCTO:
+
+package modelo2;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "producto")
+public class Producto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "precio")
+    private double precio;
+
+    @Column(name = "codigo_fabricante")
+    private int codigo_fabricante;
+
+    // Constructor por defecto
+    public Producto() {
+    }
+
+    // Constructor completo
+    public Producto(String nombre, double precio, int codigoFabricante) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.codigo_fabricante = codigo_fabricante;
+    }
+
+    // Getters y Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
+
+    public int getCodigo_fabricante() { return codigo_fabricante; }
+    public void setCodigo_fabricante(int codigo_fabricante) { this.codigo_fabricante = codigo_fabricante; }
+
+    @Override
+    public String toString() {
+        return "producto{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                ", codigo_fabricante=" + codigo_fabricante +
+                '}';
+    }
+}
+
+
+VER DATO PRODUCTO:
+
+package modelo2;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.context.internal.ThreadLocalSessionContext;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+public class VerDatosproducto {
+
+    public static void main(String[] args) {
+
+        // Configurar la sesión de Hibernate
+        SessionFactory sessionFactory = new Configuration()
+                .configure()
+                .buildSessionFactory();
+
+        // Configurar la sesión en el contexto actual
+        ThreadLocalSessionContext context = new ThreadLocalSessionContext((SessionFactoryImplementor) sessionFactory);
+        context.bind(sessionFactory.openSession());
+
+        try {
+            // Obtener la sesión actual
+            Session session = context.currentSession();
+
+            // Iniciar transacción
+            session.beginTransaction();
+
+            // Crear consulta HQL para seleccionar todos los registros de la tabla fabricante
+            String hql = "FROM Producto";
+            Query<Producto> query = session.createQuery(hql, Producto.class);
+
+            // Ejecutar consulta y obtener resultados
+            List<Producto> producto = query.list();
+
+            // Imprimir resultados
+            System.out.println("Registros en la tabla produ cto");
+            for (Producto p : producto) {
+                System.out.println(p.toString());
+            }
+
+            session.getTransaction().commit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            context.unbind(sessionFactory);
+            sessionFactory.close();
+        }
+    }
+}
+
+
+MODELO 3 CLIENTE:
+
+package modelo3;
+
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "clientes") // Nombre de la tabla en tu base de datos
+public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id") 
+    private int id;
+
+    @Column(name = "nombre", nullable = false)
+    private String nombre;
+
+    @Column(name = "ciudad")
+    private String ciudad;
+
+    // Constructor por defecto (obligatorio para JPA)
+    public Cliente() {
+    }
+
+    // Constructor con parámetros
+    public Cliente(String nombre, String ciudad) {
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+    }
+
+    // Getters y Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    @Override
+    public String toString() {
+        return "cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                '}';
+    }
+  
+
+VER DATO CLIENTE:
+  
+package modelo3;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.context.internal.ThreadLocalSessionContext;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+public class VerDatoscliente {
+
+    private static Cliente[] Cliente;
+
+	public static void main(String[] args) {
+
+        // Configurar la sesión de Hibernate
+        SessionFactory sessionFactory = new Configuration()
+                .configure()
+                .buildSessionFactory();
+
+        // Configurar la sesión en el contexto actual
+        ThreadLocalSessionContext context = new ThreadLocalSessionContext((SessionFactoryImplementor) sessionFactory);
+        context.bind(sessionFactory.openSession());
+
+        try {
+            // Obtener la sesión actual
+            Session session = context.currentSession();
+
+            // Iniciar transacción
+            session.beginTransaction();
+
+            // Crear consulta HQL para seleccionar todos los registros de la tabla fabricante
+            String hql = "FROM Cliente";
+            Query<Cliente> query = session.createQuery(hql, Cliente.class);
+
+            // Ejecutar consulta y obtener resultados
+            List<Cliente> Cliente = query.list();
+
+            // Imprimir resultados
+            System.out.println("Registros en la tabla cliente:");
+            for (Cliente c : Cliente) {
+                System.out.println(c.toString());
+            }
+
+            session.getTransaction().commit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            context.unbind(sessionFactory);
+            sessionFactory.close();
+        }
+    }
+}

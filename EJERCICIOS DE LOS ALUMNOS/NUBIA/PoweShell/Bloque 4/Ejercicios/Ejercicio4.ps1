@@ -4,4 +4,4 @@ $rule = New-Object System.Security.AccessControl.FileSystemAccessRule("Usuario",
 
 $acl.AddAccessRule($rule) 
 
-Set-Acl "C:\prueba" $acl 
+Set-Acl "C:\prueba" $acl

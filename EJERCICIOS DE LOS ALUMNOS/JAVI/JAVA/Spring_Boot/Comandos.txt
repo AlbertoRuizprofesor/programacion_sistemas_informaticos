@@ -1,0 +1,44 @@
+==========================================================
+GUÍA DE COMANDOS CRUD - BASE DE DATOS: cursos2026
+==========================================================
+Nota: Pulsa ENTER cuando pida "Enter password" (clave vacía).
+
+1. CREATE (Insertar datos)
+----------------------------------------------------------
+# Insertar un nuevo alumno
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; INSERT INTO alumnos (nombre, apellidos, direccion, ciudad) VALUES ('Javier', 'Molina', 'Calle Alba 13', 'Malaga');"
+
+# Insertar un nuevo curso
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; INSERT INTO cursos (nombre_curso, descripcion, precio) VALUES ('Spring Boot Avanzado', 'Curso de APIs REST', 499.99);"
+
+
+2. READ (Consultar datos)
+----------------------------------------------------------
+# Ver todos los alumnos
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; SELECT * FROM alumnos;"
+
+# Ver todos los cursos
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; SELECT * FROM cursos;"
+
+# Buscar un alumno específico por ID
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; SELECT * FROM alumnos WHERE id = 1;"
+
+
+3. UPDATE (Actualizar datos)
+----------------------------------------------------------
+# Cambiar la ciudad de un alumno por su ID
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; UPDATE alumnos SET ciudad = 'Madrid' WHERE id = 1;"
+
+# Cambiar el precio de un curso
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; UPDATE cursos SET precio = 399.00 WHERE id = 1;"
+
+
+4. DELETE (Borrar datos)
+----------------------------------------------------------
+# Borrar un alumno específico (¡CUIDADO CON EL WHERE!)
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; DELETE FROM alumnos WHERE id = 6;"
+
+# Borrar un curso específico
+& "C:\xampp\mysql\bin\mysql.exe" -u root -p -e "USE cursos2026; DELETE FROM cursos WHERE id = 3;"
+
+==========================================================

@@ -1,0 +1,1 @@
+Get-Acl "C:\prueba" | Format-List 

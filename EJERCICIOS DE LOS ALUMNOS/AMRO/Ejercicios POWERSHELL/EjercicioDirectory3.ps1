@@ -1,0 +1,1 @@
+Remove-Item -Path C:\INFORMESPROCESOS, C:\INFORMESSERVICIOS, C:\BACKUP -Recurse -Force

@@ -1,0 +1,1 @@
+Get-Eventlog -LogName System -Newest 10

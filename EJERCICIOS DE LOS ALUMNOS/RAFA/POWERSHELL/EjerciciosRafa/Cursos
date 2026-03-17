@@ -1,0 +1,47 @@
+package com.example.modelo;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Cursos {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+	private int id_alumno;
+    private int id_curso;
+    private Date fecha_Cursos;
+	
+ // Getters y Setters
+    public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public int getId_alumno() {
+		return id_alumno;
+	}
+	public void setId_alumno(int id_alumno) {
+		this.id_alumno = id_alumno;
+	}
+	public int getId_curso() {
+		return id_curso;
+	}
+	public void setId_curso(int id_curso) {
+		this.id_curso = id_curso;
+	}
+	public Date getFecha_Cursos() {
+		return fecha_Cursos;
+	}
+	public void setFecha_Cursos(Date fecha_Cursos) {
+		this.fecha_Cursos = fecha_Cursos;
+	}
+}
+    

@@ -1,0 +1,14 @@
+package com.example.modelo.factura;
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Springdatabase4Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Springdatabase4Application.class, args);
+    }
+
+}

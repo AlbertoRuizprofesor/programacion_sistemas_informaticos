@@ -1,0 +1,1 @@
+Get-Process | Export-Csv here-Object { $_.Status -eq "Running"}

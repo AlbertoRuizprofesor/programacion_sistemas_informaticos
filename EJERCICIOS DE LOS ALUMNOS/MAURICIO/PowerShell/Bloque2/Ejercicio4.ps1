@@ -1,0 +1,1 @@
+Get-ChildItem c:\xampp -Recurse | Where-Object { $_.length -gt 10MB}

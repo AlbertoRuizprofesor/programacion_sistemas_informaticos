@@ -13,11 +13,11 @@ CREATE TABLE IF NOT EXISTS alumnos (
 """) 
  
 alumnos = [ 
-    ("Ana", 20, 8.5), 
-    ("Luis", 22, 7.0), 
-    ("Marta", 19, 9.2), 
-    ("Pablo", 21, 6.8), 
-    ("Sara", 23, 8.9), 
+    ("Ana", 28, 8.5), 
+    ("Noemí", 28, 9), 
+    ("Nubia", 20, 9.2), 
+    ("Darío", 17, 9), 
+    ("Andrés", 18, 8.9), 
 ] 
  
 cursor.executemany("INSERT INTO alumnos (nombre, edad, nota) VALUES (?, ?, ?)", alumnos) 

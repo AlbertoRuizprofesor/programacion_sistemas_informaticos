@@ -4,6 +4,5 @@
 /**
  * 
  */
-module calculadora {
-	requires java.desktop;
+module repasosockets {
 }

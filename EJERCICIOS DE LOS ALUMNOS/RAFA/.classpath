@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="calculadora/src"/>
+	<classpathentry kind="src" path="EJERCICIOS JAVA 18 FEBRERO"/>
+	<classpathentry kind="src" path="JAVA/calculadora/src"/>
+	<classpathentry kind="src" path="JAVA/mavenConectaDb/src/main/java"/>
+	<classpathentry kind="src" path="JAVA/menus/src"/>
+	<classpathentry kind="src" path="JAVA/mysqlswing/src"/>
+	<classpathentry kind="src" path="JAVA/ProgramacionSistemas/src"/>
+	<classpathentry kind="src" path="mavenConectaDb/src/main/java"/>
+	<classpathentry kind="src" path="menus/src"/>
+	<classpathentry kind="src" path="mysqlswing/src"/>
+	<classpathentry kind="src" path="ProgramacionSistemas/src"/>
+	<classpathentry kind="output" path="JAVA/ProgramacionSistemas/bin"/>
+</classpath>
